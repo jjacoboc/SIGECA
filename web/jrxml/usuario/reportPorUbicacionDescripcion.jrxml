@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportPorCodigo" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="areaConstruida" class="java.lang.Double">
+		<fieldDescription><![CDATA[areaConstruida]]></fieldDescription>
+	</field>
+	<field name="areaLote" class="java.lang.Double">
+		<fieldDescription><![CDATA[areaLote]]></fieldDescription>
+	</field>
+	<field name="clasificacionPredio" class="java.lang.String">
+		<fieldDescription><![CDATA[clasificacionPredio]]></fieldDescription>
+	</field>
+	<field name="class" class="java.lang.Class">
+		<fieldDescription><![CDATA[class]]></fieldDescription>
+	</field>
+	<field name="crc" class="java.lang.String">
+		<fieldDescription><![CDATA[crc]]></fieldDescription>
+	</field>
+	<field name="cuc" class="java.lang.String">
+		<fieldDescription><![CDATA[cuc]]></fieldDescription>
+	</field>
+	<field name="nroDocumento" class="java.lang.String">
+		<fieldDescription><![CDATA[nroDocumento]]></fieldDescription>
+	</field>
+	<field name="titularCatastral" class="java.lang.String">
+		<fieldDescription><![CDATA[titularCatastral]]></fieldDescription>
+	</field>
+	<field name="ubicacionPredio" class="java.lang.String">
+		<fieldDescription><![CDATA[ubicacionPredio]]></fieldDescription>
+	</field>
+	<field name="usoPredioCatastral" class="java.lang.String">
+		<fieldDescription><![CDATA[usoPredioCatastral]]></fieldDescription>
+	</field>
+	<field name="reporteBean.departamento" class="java.lang.String">
+		<fieldDescription><![CDATA[reporteBean.departamento]]></fieldDescription>
+	</field>
+	<field name="reporteBean.provincia" class="java.lang.String">
+		<fieldDescription><![CDATA[reporteBean.provincia]]></fieldDescription>
+	</field>
+	<field name="reporteBean.distrito" class="java.lang.String">
+		<fieldDescription><![CDATA[reporteBean.distrito]]></fieldDescription>
+	</field>
+	<group name="cabecera">
+		<groupHeader>
+			<band height="98">
+				<line>
+					<reportElement x="-1" y="87" width="555" height="1"/>
+				</line>
+				<staticText>
+					<reportElement x="145" y="0" width="312" height="42"/>
+					<textElement textAlignment="Center">
+						<font size="12" isBold="true" isUnderline="true"/>
+					</textElement>
+					<text><![CDATA[5-REPORTE (Usuario)POR: Ubicacion y descripcion del predio]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="131" y="62" width="69" height="20"/>
+					<textElement/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{reporteBean.departamento}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="379" y="62" width="57" height="20"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Distrito:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="45" y="62" width="86" height="20"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Departamento:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="45" y="42" width="100" height="20"/>
+					<textElement>
+						<font isBold="true" isUnderline="true"/>
+					</textElement>
+					<text><![CDATA[Datos Ubicacion]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="200" y="62" width="79" height="20"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Provincia:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="279" y="62" width="92" height="20"/>
+					<textElement/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{reporteBean.provincia}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="436" y="62" width="100" height="20"/>
+					<textElement/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{reporteBean.distrito}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="columnas">
+		<groupHeader>
+			<band height="30">
+				<line>
+					<reportElement x="0" y="29" width="554" height="1"/>
+				</line>
+				<line>
+					<reportElement x="0" y="0" width="1" height="30"/>
+				</line>
+				<staticText>
+					<reportElement x="25" y="1" width="86" height="20"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[ Titular Catastral]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="0" width="23" height="20"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[  Nº]]></text>
+				</staticText>
+				<line>
+					<reportElement x="555" y="0" width="1" height="30"/>
+				</line>
+				<line>
+					<reportElement x="454" y="0" width="1" height="30"/>
+				</line>
+				<line>
+					<reportElement x="115" y="0" width="1" height="30"/>
+				</line>
+				<line>
+					<reportElement x="1" y="0" width="554" height="1"/>
+				</line>
+				<line>
+					<reportElement x="23" y="0" width="1" height="30"/>
+				</line>
+				<staticText>
+					<reportElement x="457" y="0" width="91" height="20"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[ Área de Lote (m2)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="118" y="1" width="82" height="28"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[ Ubicación del Predio]]></text>
+				</staticText>
+				<line>
+					<reportElement x="204" y="1" width="1" height="28"/>
+				</line>
+				<staticText>
+					<reportElement x="209" y="0" width="93" height="20"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[CUC / CRC]]></text>
+				</staticText>
+				<line>
+					<reportElement x="369" y="0" width="1" height="30"/>
+				</line>
+				<staticText>
+					<reportElement x="371" y="1" width="80" height="28"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Uso del Predio catastral]]></text>
+				</staticText>
+				<line>
+					<reportElement x="302" y="1" width="1" height="28"/>
+				</line>
+				<staticText>
+					<reportElement x="303" y="1" width="66" height="28"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Clasificación de Predio]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="70" splitType="Stretch">
+			<staticText>
+				<reportElement x="392" y="5" width="65" height="20"/>
+				<textElement/>
+				<text><![CDATA[Consulta Nro:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="394" y="25" width="63" height="20"/>
+				<textElement/>
+				<text><![CDATA[Hoja:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="457" y="25" width="86" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="0" y="0" width="151" height="55"/>
+				<imageExpression class="java.lang.String"><![CDATA["G:\\Proyectos\\SIGECA\\DEV\\reportes\\logo.PNG"]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="24" splitType="Stretch">
+			<textField>
+				<reportElement x="1" y="0" width="22" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="0" width="1" height="24"/>
+			</line>
+			<line>
+				<reportElement x="23" y="0" width="1" height="24"/>
+			</line>
+			<line>
+				<reportElement x="115" y="0" width="1" height="24"/>
+			</line>
+			<line>
+				<reportElement x="454" y="1" width="1" height="22"/>
+			</line>
+			<line>
+				<reportElement x="555" y="0" width="1" height="24"/>
+			</line>
+			<line>
+				<reportElement x="0" y="23" width="554" height="1"/>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="554" height="1"/>
+			</line>
+			<textField>
+				<reportElement x="457" y="0" width="91" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{areaLote}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="204" y="1" width="1" height="22"/>
+			</line>
+			<textField>
+				<reportElement x="118" y="1" width="82" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ubicacionPredio}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="369" y="1" width="1" height="23"/>
+			</line>
+			<textField>
+				<reportElement x="371" y="1" width="80" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{usoPredioCatastral}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="24" y="0" width="87" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{titularCatastral}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="209" y="1" width="93" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[new String($F{cuc} +"/" + $F{crc})]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="302" y="1" width="1" height="23"/>
+			</line>
+			<textField>
+				<reportElement x="303" y="3" width="66" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{clasificacionPredio}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="36" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

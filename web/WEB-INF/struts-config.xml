@@ -1,0 +1,1681 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+    <form-beans>
+        <form-bean name="LoguinDynaForm" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="loguin" type="java.lang.String"/>
+            <form-property name="clave" type="java.lang.String"/>
+            <form-property name="captcha" type="java.lang.String"/>
+            <form-property name="codDepartamento" type="java.lang.String"/>
+            <form-property name="codProvincia" type="java.lang.String"/>
+            <form-property name="codDistrito" type="java.lang.String"/>
+        </form-bean>
+        <form-bean name="RegistroUsuarioDynaForm" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="id_trabajador" type="java.lang.String"/>
+            <form-property name="fecha_cese" type="java.lang.String"/>
+            <form-property name="id_est_usu_tra" type="java.lang.String"/>
+            <form-property name="captcha" type="java.lang.String"/>
+            <form-property name="clave" type="java.lang.String"/>
+            <form-property name="claveActual" type="java.lang.String"/>
+            <form-property name="id_perfil" type="java.lang.String"/>
+        </form-bean>
+        <form-bean name="MenuDynaForm" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="accion" type="java.lang.String"/>
+            <form-property name="cuc" type="java.lang.String"/>
+            <form-property name="numFicha" type="java.lang.String"/>
+            <form-property name="codHojCatastral" type="java.lang.String"/>
+            <form-property name="codRefCatastral" type="java.lang.String"/>
+            <form-property name="codEstado" type="java.lang.String"/>
+            <form-property name="dniTecCatastral" type="java.lang.String"/>
+            <form-property name="nomTecCatastral" type="java.lang.String"/>
+            <form-property name="indListaFicha" type="java.lang.String"/>
+        </form-bean>
+        <form-bean name="InicioDynaForm" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="cuc" type="java.lang.String"/>
+            <form-property name="numFicha" type="java.lang.String"/>
+            <form-property name="codHojCatastral" type="java.lang.String"/>
+            <form-property name="codRefCatastral" type="java.lang.String"/>
+            <form-property name="codEstado" type="java.lang.String"/>
+            <form-property name="dniTecCatastral" type="java.lang.String"/>
+            <form-property name="nomTecCatastral" type="java.lang.String"/>
+            <form-property name="dniTitular" type="java.lang.String"/>
+            <form-property name="nomTitular" type="java.lang.String"/>
+            <form-property name="indListaFicha" type="java.lang.String"/>
+            <form-property name="accion" type="java.lang.String"/>
+        </form-bean>
+        <form-bean name="FichaIndividualDynaForm" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="numFicha" type="java.lang.String"/>
+            <form-property name="numFichLote" type="java.lang.String"/>
+            <form-property name="numTotFichLote" type="java.lang.String"/>
+            <form-property name="observacion" type="java.lang.String"/>
+            <form-property name="dniDeclarante" type="java.lang.String"/>
+            <form-property name="nomDeclarante" type="java.lang.String"/>
+            <form-property name="apePatDeclarante" type="java.lang.String"/>
+            <form-property name="apeMatDeclarante" type="java.lang.String"/>
+            <form-property name="fecFirDeclarante" type="java.lang.String"/>
+            <form-property name="idSupervisor" type="java.lang.String"/>
+            <form-property name="dniSupervisor" type="java.lang.String"/>
+            <form-property name="nomSupervisor" type="java.lang.String"/>
+            <form-property name="apeSupervisor" type="java.lang.String"/>
+            <form-property name="fecFirSupervisor" type="java.lang.String"/>
+            <form-property name="idTecnico" type="java.lang.String"/>
+            <form-property name="dniTecCatastral" type="java.lang.String"/>
+            <form-property name="nomTecCatastral" type="java.lang.String"/>
+            <form-property name="apeTecCatastral" type="java.lang.String"/>
+            <form-property name="fecFirTecCatastral" type="java.lang.String"/>
+            <form-property name="idVerificador" type="java.lang.String"/>
+            <form-property name="dniVerCatastral" type="java.lang.String"/>
+            <form-property name="nomVerCatastral" type="java.lang.String"/>
+            <form-property name="apeVerCatastral" type="java.lang.String"/>
+            <form-property name="fecFirVerCatastral" type="java.lang.String"/>
+            <form-property name="numRegVerCatastral" type="java.lang.String"/>
+            <form-property name="codEvaPreCatastral" type="java.lang.String"/>
+            <form-property name="areTerInvLotColindante" type="java.lang.String"/>
+            <form-property name="areTerInvJarAislamiento" type="java.lang.String"/>
+            <form-property name="areTerInvArePublica" type="java.lang.String"/>
+            <form-property name="areTerInvAreIntangible" type="java.lang.String"/>
+            <!-- CABECERA -->
+            <form-property name="cucA" type="java.lang.String"/>
+            <form-property name="cucB" type="java.lang.String"/>
+            <form-property name="codHojCatastral" type="java.lang.String"/>
+            <form-property name="codRefCatastral" type="java.lang.String"/>
+            <form-property name="codRefCatastralRural" type="java.lang.String"/>
+            <form-property name="dpto" type="java.lang.String"/>
+            <form-property name="prov" type="java.lang.String"/>
+            <form-property name="dist" type="java.lang.String"/>
+            <form-property name="sector" type="java.lang.String"/>
+            <form-property name="manzana" type="java.lang.String"/>
+            <form-property name="lote" type="java.lang.String"/>
+            <form-property name="edifica" type="java.lang.String"/>
+            <form-property name="piso" type="java.lang.String"/>
+            <form-property name="entrada" type="java.lang.String"/>
+            <form-property name="unidad" type="java.lang.String"/>
+            <form-property name="dc" type="java.lang.String"/>
+            <form-property name="codConRenta" type="java.lang.String"/>
+            <form-property name="codPreRenta" type="java.lang.String"/>
+            <form-property name="uniAcuCodPreRenta" type="java.lang.String"/>
+            <form-property name="zona" type="java.lang.String"/>
+            <form-property name="uniOrgCatRural" type="java.lang.String"/>
+            <form-property name="uniCatastral" type="java.lang.String"/>
+            <form-property name="coorEste" type="java.lang.String"/>
+            <form-property name="coorNorte" type="java.lang.String"/>
+            <!-- ******** -->
+            <!-- UBICACION DEL PREDIO CATASTRAL -->
+            <form-property name="indListaVia" type="java.lang.String"/>
+            <form-property name="codTipEdificacionPre" type="java.lang.String"/>
+            <form-property name="nomEdificacionPre" type="java.lang.String"/>
+            <form-property name="codTipInteriorPre" type="java.lang.String"/>
+            <form-property name="numInteriorPre" type="java.lang.String"/>
+            <form-property name="codHUPre" type="java.lang.String"/>
+            <form-property name="nomHUPre" type="java.lang.String"/>
+            <form-property name="sectorPre" type="java.lang.String"/>
+            <form-property name="manzanaPre" type="java.lang.String"/>
+            <form-property name="lotePre" type="java.lang.String"/>
+            <form-property name="sublotePre" type="java.lang.String"/>
+                <!-- VIA -->
+                <form-property name="codVia" type="java.lang.String"/>
+                <form-property name="codTipVia" type="java.lang.String"/>
+                <form-property name="desTipVia" type="java.lang.String"/>
+                <form-property name="nomVia" type="java.lang.String"/>
+                <form-property name="codTipPuerta" type="java.lang.String"/>
+                <form-property name="desTipPuerta" type="java.lang.String"/>
+                <form-property name="numMunicipal" type="java.lang.String"/>
+                <form-property name="codConNumeracion" type="java.lang.String"/>
+                <form-property name="desConNumeracion" type="java.lang.String"/>
+                <form-property name="numCerNumeracion" type="java.lang.String"/>
+                <!-- *** -->
+            <!-- ****************************** -->
+            <!-- IDENTIFICACION DEL TITULAR CATASTRAL -->
+            <form-property name="codTipTitular" type="java.lang.String"/>
+            <form-property name="codTipDocIdentidad" type="java.lang.String"/>
+            <form-property name="numDocIdentidad" type="java.lang.String"/>
+            <form-property name="codEstCivil" type="java.lang.String"/>
+            <form-property name="nombre" type="java.lang.String"/>
+            <form-property name="apePaterno" type="java.lang.String"/>
+            <form-property name="apeMaterno" type="java.lang.String"/>
+            <form-property name="codTipDocIdentidad2" type="java.lang.String"/>
+            <form-property name="numDocIdentidad2" type="java.lang.String"/>
+            <form-property name="nombre2" type="java.lang.String"/>
+            <form-property name="apePaterno2" type="java.lang.String"/>
+            <form-property name="apeMaterno2" type="java.lang.String"/>
+            <form-property name="numRuc" type="java.lang.String"/>
+            <form-property name="razSocial" type="java.lang.String"/>
+            <form-property name="codConEspTitular" type="java.lang.String"/>
+            <form-property name="codPerJuridica" type="java.lang.String"/>
+            <form-property name="numResExoneracion" type="java.lang.String"/>
+            <form-property name="numBolPensionista" type="java.lang.String"/>
+            <form-property name="fecIniExoneracion" type="java.lang.String"/>
+            <form-property name="fecVenExoneracion" type="java.lang.String"/>
+            <!-- ************************************ -->
+            <!-- DOMICILIO FISCAL DEL TITULAR CATASTRAL -->
+            <form-property name="codDepartamento" type="java.lang.String"/>
+            <form-property name="codProvincia" type="java.lang.String"/>
+            <form-property name="codDistrito" type="java.lang.String"/>
+            <form-property name="telefonoTit" type="java.lang.String"/>
+            <form-property name="anexoTit" type="java.lang.String"/>
+            <form-property name="faxTit" type="java.lang.String"/>
+            <form-property name="correoTit" type="java.lang.String"/>
+            <form-property name="codViaTit" type="java.lang.String"/>
+            <form-property name="codTipViaTit" type="java.lang.String"/>
+            <form-property name="nomViaTit" type="java.lang.String"/>
+            <form-property name="numMunicipalTit" type="java.lang.String"/>
+            <form-property name="nomEdificacionTit" type="java.lang.String"/>
+            <form-property name="numInteriorTit" type="java.lang.String"/>
+            <form-property name="codHUTit" type="java.lang.String"/>
+            <form-property name="nomHUTit" type="java.lang.String"/>
+            <form-property name="sectorTit" type="java.lang.String"/>
+            <form-property name="manzanaTit" type="java.lang.String"/>
+            <form-property name="loteTit" type="java.lang.String"/>
+            <form-property name="subloteTit" type="java.lang.String"/>
+            <!-- ************************************** -->
+            <!-- CARACTERISTICAS DE LA TITULARIDAD -->
+            <form-property name="codConTitular" type="java.lang.String"/>
+            <form-property name="codForAdqPredio" type="java.lang.String"/>
+            <form-property name="fecAdquisicion" type="java.lang.String"/>
+            <form-property name="codConEspPredio" type="java.lang.String"/>
+            <form-property name="numResExoPredio" type="java.lang.String"/>
+            <form-property name="porcentaje" type="java.lang.String"/>
+            <form-property name="fecInicio" type="java.lang.String"/>
+            <form-property name="fecVencimiento" type="java.lang.String"/>
+            <!-- ********************************* -->
+            <!-- DESCRIPCION DEL PREDIO -->
+            <form-property name="codClaPredio" type="java.lang.String"/>
+            <form-property name="codSubClaPredio" type="java.lang.String"/>
+            <form-property name="codUbiPreCatastral" type="java.lang.String"/>
+            <form-property name="codUsoPreCatastral" type="java.lang.String"/>
+            <form-property name="desUsoPreCatastral" type="java.lang.String"/>
+            <form-property name="estructuracion" type="java.lang.String"/>
+            <form-property name="zonificacion" type="java.lang.String"/>
+            <form-property name="areTerTitulo" type="java.lang.String"/>
+            <form-property name="areTerDeclarada" type="java.lang.String"/>
+            <form-property name="areTerVerificada" type="java.lang.String"/>
+            <form-property name="medCamFrente" type="java.lang.String"/>
+            <form-property name="medTitFrente" type="java.lang.String"/>
+            <form-property name="colCamFrente" type="java.lang.String"/>
+            <form-property name="colTitFrente" type="java.lang.String"/>
+            <form-property name="medCamDerecha" type="java.lang.String"/>
+            <form-property name="medTitDerecha" type="java.lang.String"/>
+            <form-property name="colCamDerecha" type="java.lang.String"/>
+            <form-property name="colTitDerecha" type="java.lang.String"/>
+            <form-property name="medCamIzquierda" type="java.lang.String"/>
+            <form-property name="medTitIzquierda" type="java.lang.String"/>
+            <form-property name="colCamIzquierda" type="java.lang.String"/>
+            <form-property name="colTitIzquierda" type="java.lang.String"/>
+            <form-property name="medCamFondo" type="java.lang.String"/>
+            <form-property name="medTitFondo" type="java.lang.String"/>
+            <form-property name="colCamFondo" type="java.lang.String"/>
+            <form-property name="colTitFondo" type="java.lang.String"/>
+            <!-- ********************** -->
+            <!-- SERVICIOS BASICOS -->
+            <form-property name="luz" type="java.lang.String"/>
+            <form-property name="numSumLuz" type="java.lang.String"/>
+            <form-property name="agua" type="java.lang.String"/>
+            <form-property name="numConAgua" type="java.lang.String"/>
+            <form-property name="telefono" type="java.lang.String"/>
+            <form-property name="numTelefono" type="java.lang.String"/>
+            <form-property name="desague" type="java.lang.String"/>
+            <!-- ***************** -->
+            <!-- CONSTRUCCIONES -->
+            <form-property name="indListaConstruccion" type="java.lang.String"/>
+            <form-property name="terLegal" type="java.lang.String"/>
+            <form-property name="terFisico" type="java.lang.String"/>
+            <form-property name="conLegal" type="java.lang.String"/>
+            <form-property name="conFisica" type="java.lang.String"/>
+                <!-- LISTA CONSTRUCCIONES -->
+                <form-property name="numPiso" type="java.lang.String"/>
+                <form-property name="fecConstruccion" type="java.lang.String"/>
+                <form-property name="codMEP" type="java.lang.String"/>
+                <form-property name="desMEP" type="java.lang.String"/>
+                <form-property name="codECC" type="java.lang.String"/>
+                <form-property name="desECC" type="java.lang.String"/>
+                <form-property name="codECS" type="java.lang.String"/>
+                <form-property name="desECS" type="java.lang.String"/>
+                <form-property name="muro" type="java.lang.String"/>
+                <form-property name="techo" type="java.lang.String"/>
+                <form-property name="pisos" type="java.lang.String"/>
+                <form-property name="puerta" type="java.lang.String"/>
+                <form-property name="revestimiento" type="java.lang.String"/>
+                <form-property name="bano" type="java.lang.String"/>
+                <form-property name="instalaciones" type="java.lang.String"/>
+                <form-property name="areConDeclarada" type="java.lang.String"/>
+                <form-property name="areConVerificada" type="java.lang.String"/>
+                <form-property name="codUCA" type="java.lang.String"/>
+                <form-property name="desUCA" type="java.lang.String"/>
+                <form-property name="areConstruida" type="java.lang.String"/>
+                <!-- ******************** -->
+            <!-- ************** -->
+            <!-- OBRAS COMPLEMENTARIAS -->
+            <form-property name="indListaObra" type="java.lang.String"/>
+            <form-property name="codInstalacion" type="java.lang.String"/>
+            <form-property name="desInstalacion" type="java.lang.String"/>
+            <form-property name="largo" type="java.lang.String"/>
+            <form-property name="ancho" type="java.lang.String"/>
+            <form-property name="alto" type="java.lang.String"/>
+            <form-property name="total" type="java.lang.String"/>
+            <form-property name="uniMedida" type="java.lang.String"/>
+            <!-- ********************* -->
+            <!-- DOCUMENTOS -->
+            <form-property name="indListaDocumento" type="java.lang.String"/>
+            <form-property name="codTipDocumento" type="java.lang.String"/>
+            <form-property name="desTipDocumento" type="java.lang.String"/>
+            <form-property name="numDocumento" type="java.lang.String"/>
+            <form-property name="nomDocumento" type="java.lang.String"/>
+            <form-property name="codForPresentacion" type="java.lang.String"/>
+            <form-property name="desForPresentacion" type="java.lang.String"/>
+            <form-property name="fecha" type="java.lang.String"/>
+            <form-property name="area" type="java.lang.String"/>
+            <form-property name="nomNotaria" type="java.lang.String"/>
+            <form-property name="kardex" type="java.lang.String"/>
+            <form-property name="fecEscPublica" type="java.lang.String"/>
+            <!-- ********** -->
+            <!-- INSCRIPCIÓN DEL PREDIO CATASTRAL EN EL REGISTRO DE PREDIOS -->
+            <form-property name="codTipParRegistral" type="java.lang.String"/>
+            <form-property name="numPartida" type="java.lang.String"/>
+            <form-property name="fojas" type="java.lang.String"/>
+            <form-property name="asiento" type="java.lang.String"/>
+            <form-property name="fecInsPredio" type="java.lang.String"/>
+            <form-property name="codDecFabrica" type="java.lang.String"/>
+            <form-property name="asiInsFabrica" type="java.lang.String"/>
+            <form-property name="fecInsFabrica" type="java.lang.String"/>
+            <!-- ********************************************************** -->
+            <!-- INFORMACIÓN COMPLEMENTARIA -->
+            <form-property name="indListaLitigante" type="java.lang.String"/>
+            <form-property name="codConDeclarante" type="java.lang.String"/>
+            <form-property name="codEstLleFicha" type="java.lang.String"/>
+            <form-property name="numHabitantes" type="java.lang.String"/>
+            <form-property name="numFamilias" type="java.lang.String"/>
+            <form-property name="codMantenimiento" type="java.lang.String"/>
+            <form-property name="desTipDocIdentidad" type="java.lang.String"/>
+            <form-property name="nomCompleto" type="java.lang.String"/>
+            <form-property name="nomLitigante" type="java.lang.String"/>
+            <form-property name="apePatLitigante" type="java.lang.String"/>
+            <form-property name="apeMatLitigante" type="java.lang.String"/>
+            <form-property name="codContribuyente" type="java.lang.String"/>
+            <!-- ************************** -->
+        </form-bean>
+        <form-bean name="FichaCotitularidadDynaForm" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="numFicha" type="java.lang.String"/>
+            <form-property name="numFichLote" type="java.lang.String"/>
+            <form-property name="numTotFichLote" type="java.lang.String"/>
+            <form-property name="observacion" type="java.lang.String"/>
+            <form-property name="dniDeclarante" type="java.lang.String"/>
+            <form-property name="nomDeclarante" type="java.lang.String"/>
+            <form-property name="apePatDeclarante" type="java.lang.String"/>
+            <form-property name="apeMatDeclarante" type="java.lang.String"/>
+            <form-property name="fecFirDeclarante" type="java.lang.String"/>
+            <form-property name="idSupervisor" type="java.lang.String"/>
+            <form-property name="dniSupervisor" type="java.lang.String"/>
+            <form-property name="nomSupervisor" type="java.lang.String"/>
+            <form-property name="apeSupervisor" type="java.lang.String"/>
+            <form-property name="fecFirSupervisor" type="java.lang.String"/>
+            <form-property name="idTecnico" type="java.lang.String"/>
+            <form-property name="dniTecCatastral" type="java.lang.String"/>
+            <form-property name="nomTecCatastral" type="java.lang.String"/>
+            <form-property name="apeTecCatastral" type="java.lang.String"/>
+            <form-property name="fecFirTecCatastral" type="java.lang.String"/>
+            <form-property name="idVerificador" type="java.lang.String"/>
+            <form-property name="dniVerCatastral" type="java.lang.String"/>
+            <form-property name="nomVerCatastral" type="java.lang.String"/>
+            <form-property name="apeVerCatastral" type="java.lang.String"/>
+            <form-property name="fecFirVerCatastral" type="java.lang.String"/>
+            <form-property name="numRegVerCatastral" type="java.lang.String"/>
+            <form-property name="codEvaPreCatastral" type="java.lang.String"/>
+            <form-property name="areTerInvLotColindante" type="java.lang.String"/>
+            <form-property name="areTerInvJarAislamiento" type="java.lang.String"/>
+            <form-property name="areTerInvArePublica" type="java.lang.String"/>
+            <form-property name="areTerInvAreIntangible" type="java.lang.String"/>
+            <form-property name="indListaCotitulares" type="java.lang.String"/>
+            <!-- CABECERA -->
+            <form-property name="cucA" type="java.lang.String"/>
+            <form-property name="cucB" type="java.lang.String"/>
+            <form-property name="codHojCatastral" type="java.lang.String"/>
+            <form-property name="codRefCatastral" type="java.lang.String"/>
+            <form-property name="codRefCatastralRural" type="java.lang.String"/>
+            <form-property name="dpto" type="java.lang.String"/>
+            <form-property name="prov" type="java.lang.String"/>
+            <form-property name="dist" type="java.lang.String"/>
+            <form-property name="sector" type="java.lang.String"/>
+            <form-property name="manzana" type="java.lang.String"/>
+            <form-property name="lote" type="java.lang.String"/>
+            <form-property name="edifica" type="java.lang.String"/>
+            <form-property name="piso" type="java.lang.String"/>
+            <form-property name="entrada" type="java.lang.String"/>
+            <form-property name="unidad" type="java.lang.String"/>
+            <form-property name="dc" type="java.lang.String"/>
+            <form-property name="codConRenta" type="java.lang.String"/>
+            <form-property name="codPreRenta" type="java.lang.String"/>
+            <form-property name="uniAcuCodPreRenta" type="java.lang.String"/>
+            <form-property name="zona" type="java.lang.String"/>
+            <form-property name="uniOrgCatRural" type="java.lang.String"/>
+            <form-property name="uniCatastral" type="java.lang.String"/>
+            <form-property name="coorEste" type="java.lang.String"/>
+            <form-property name="coorNorte" type="java.lang.String"/>
+            <!-- ******** -->
+            <!-- DATOS DEL COTITULAR CATASTRAL -->
+            <form-property name="numCotitular" type="java.lang.String"/>
+            <form-property name="numTotCotitular" type="java.lang.String"/>
+            <form-property name="codTipTitular" type="java.lang.String"/>
+            <form-property name="desTipTitular" type="java.lang.String"/>
+            <form-property name="porCotitular" type="java.lang.String"/>
+            <form-property name="codContribuyente" type="java.lang.String"/>
+            <form-property name="codTipDocIdentidad" type="java.lang.String"/>
+            <form-property name="desTipDocIdentidad" type="java.lang.String"/>
+            <form-property name="numDocIdentidad" type="java.lang.String"/>
+            <form-property name="nombre" type="java.lang.String"/>
+            <form-property name="apePaterno" type="java.lang.String"/>
+            <form-property name="apeMaterno" type="java.lang.String"/>
+            <form-property name="numRuc" type="java.lang.String"/>
+            <form-property name="razSocial" type="java.lang.String"/>
+            <form-property name="codForAdqTitular" type="java.lang.String"/>
+            <form-property name="fecAdqTitular" type="java.lang.String"/>
+            <form-property name="codConEspTitular" type="java.lang.String"/>
+            <form-property name="numResExoneracion" type="java.lang.String"/>
+            <form-property name="fecIniExoneracion" type="java.lang.String"/>
+            <form-property name="fecVenExoneracion" type="java.lang.String"/>
+            <!-- ************************************ -->
+            <!-- DOMICILIO FISCAL DEL COTITULAR CATASTRAL -->
+            <form-property name="codDepartamento" type="java.lang.String"/>
+            <form-property name="codProvincia" type="java.lang.String"/>
+            <form-property name="codDistrito" type="java.lang.String"/>
+            <form-property name="telefonoTit" type="java.lang.String"/>
+            <form-property name="anexoTit" type="java.lang.String"/>
+            <form-property name="faxTit" type="java.lang.String"/>
+            <form-property name="correoTit" type="java.lang.String"/>
+            <form-property name="codViaTit" type="java.lang.String"/>
+            <form-property name="codTipViaTit" type="java.lang.String"/>
+            <form-property name="nomViaTit" type="java.lang.String"/>
+            <form-property name="numMunicipalTit" type="java.lang.String"/>
+            <form-property name="nomEdificacionTit" type="java.lang.String"/>
+            <form-property name="numInteriorTit" type="java.lang.String"/>
+            <form-property name="codHUTit" type="java.lang.String"/>
+            <form-property name="nomHUTit" type="java.lang.String"/>
+            <form-property name="sectorTit" type="java.lang.String"/>
+            <form-property name="manzanaTit" type="java.lang.String"/>
+            <form-property name="loteTit" type="java.lang.String"/>
+            <form-property name="subloteTit" type="java.lang.String"/>
+            <!-- ************************************** -->
+            <!-- INFORMACIÓN COMPLEMENTARIA -->
+            <form-property name="codConDeclarante" type="java.lang.String"/>
+            <form-property name="codEstLleFicha" type="java.lang.String"/>
+            <!-- ************************** -->
+        </form-bean>
+        <form-bean name="FichaActividadEconomicaDynaForm" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="numFicha" type="java.lang.String"/>
+            <form-property name="numFichLote" type="java.lang.String"/>
+            <form-property name="numTotFichLote" type="java.lang.String"/>
+            <form-property name="observacion" type="java.lang.String"/>
+            <form-property name="dniDeclarante" type="java.lang.String"/>
+            <form-property name="nomDeclarante" type="java.lang.String"/>
+            <form-property name="apePatDeclarante" type="java.lang.String"/>
+            <form-property name="apeMatDeclarante" type="java.lang.String"/>
+            <form-property name="fecFirDeclarante" type="java.lang.String"/>
+            <form-property name="idSupervisor" type="java.lang.String"/>
+            <form-property name="dniSupervisor" type="java.lang.String"/>
+            <form-property name="nomSupervisor" type="java.lang.String"/>
+            <form-property name="apeSupervisor" type="java.lang.String"/>
+            <form-property name="fecFirSupervisor" type="java.lang.String"/>
+            <form-property name="idTecnico" type="java.lang.String"/>
+            <form-property name="dniTecCatastral" type="java.lang.String"/>
+            <form-property name="nomTecCatastral" type="java.lang.String"/>
+            <form-property name="apeTecCatastral" type="java.lang.String"/>
+            <form-property name="fecFirTecCatastral" type="java.lang.String"/>
+            <form-property name="idVerificador" type="java.lang.String"/>
+            <form-property name="dniVerCatastral" type="java.lang.String"/>
+            <form-property name="nomVerCatastral" type="java.lang.String"/>
+            <form-property name="apeVerCatastral" type="java.lang.String"/>
+            <form-property name="fecFirVerCatastral" type="java.lang.String"/>
+            <form-property name="numRegVerCatastral" type="java.lang.String"/>
+            <form-property name="codEvaPreCatastral" type="java.lang.String"/>
+            <form-property name="areTerInvLotColindante" type="java.lang.String"/>
+            <form-property name="areTerInvJarAislamiento" type="java.lang.String"/>
+            <form-property name="areTerInvArePublica" type="java.lang.String"/>
+            <form-property name="areTerInvAreIntangible" type="java.lang.String"/>
+
+            <!-- CABECERA -->
+            <form-property name="cucA" type="java.lang.String"/>
+            <form-property name="cucB" type="java.lang.String"/>
+            <form-property name="codHojCatastral" type="java.lang.String"/>
+            <form-property name="codRefCatastral" type="java.lang.String"/>
+            <form-property name="codRefCatastralRural" type="java.lang.String"/>
+            <form-property name="dpto" type="java.lang.String"/>
+            <form-property name="prov" type="java.lang.String"/>
+            <form-property name="dist" type="java.lang.String"/>
+            <form-property name="sector" type="java.lang.String"/>
+            <form-property name="manzana" type="java.lang.String"/>
+            <form-property name="lote" type="java.lang.String"/>
+            <form-property name="edifica" type="java.lang.String"/>
+            <form-property name="piso" type="java.lang.String"/>
+            <form-property name="entrada" type="java.lang.String"/>
+            <form-property name="unidad" type="java.lang.String"/>
+            <form-property name="dc" type="java.lang.String"/>
+            <form-property name="codConRenta" type="java.lang.String"/>
+            <form-property name="codPreRenta" type="java.lang.String"/>
+            <form-property name="uniAcuCodPreRenta" type="java.lang.String"/>
+            <form-property name="zona" type="java.lang.String"/>
+            <form-property name="uniOrgCatRural" type="java.lang.String"/>
+            <form-property name="uniCatastral" type="java.lang.String"/>
+            <form-property name="coorEste" type="java.lang.String"/>
+            <form-property name="coorNorte" type="java.lang.String"/>
+            <!-- ******** -->
+            <!-- DATOS DEL COTITULAR CATASTRAL -->
+            <form-property name="codTipTitular" type="java.lang.String"/>
+            <form-property name="nomComercial" type="java.lang.String"/>
+            <form-property name="codTipDocIdentidad" type="java.lang.String"/>
+            <form-property name="numDocIdentidad" type="java.lang.String"/>
+            <form-property name="nombre" type="java.lang.String"/>
+            <form-property name="apePaterno" type="java.lang.String"/>
+            <form-property name="apeMaterno" type="java.lang.String"/>
+            <form-property name="numRuc" type="java.lang.String"/>
+            <form-property name="razSocial" type="java.lang.String"/>
+            <form-property name="codConConductor" type="java.lang.String"/>
+            <!-- ************************************ -->
+            <!-- DOMICILIO FISCAL DEL COTITULAR CATASTRAL -->
+            <form-property name="codDepartamento" type="java.lang.String"/>
+            <form-property name="codProvincia" type="java.lang.String"/>
+            <form-property name="codDistrito" type="java.lang.String"/>
+            <form-property name="telefonoTit" type="java.lang.String"/>
+            <form-property name="anexoTit" type="java.lang.String"/>
+            <form-property name="faxTit" type="java.lang.String"/>
+            <form-property name="correoTit" type="java.lang.String"/>
+            <form-property name="codViaTit" type="java.lang.String"/>
+            <form-property name="codTipViaTit" type="java.lang.String"/>
+            <form-property name="nomViaTit" type="java.lang.String"/>
+            <form-property name="numMunicipalTit" type="java.lang.String"/>
+            <form-property name="nomEdificacionTit" type="java.lang.String"/>
+            <form-property name="numInteriorTit" type="java.lang.String"/>
+            <form-property name="codHUTit" type="java.lang.String"/>
+            <form-property name="nomHUTit" type="java.lang.String"/>
+            <form-property name="sectorTit" type="java.lang.String"/>
+            <form-property name="manzanaTit" type="java.lang.String"/>
+            <form-property name="loteTit" type="java.lang.String"/>
+            <form-property name="subloteTit" type="java.lang.String"/>
+            <!-- ************************************** -->
+            <!-- AUTORIZACION MUNICIPAL DE FUNCIONAMIENTO -->
+            <form-property name="indListaActividad" type="java.lang.String"/>
+            <form-property name="codActividad" type="java.lang.String"/>
+            <form-property name="desActividad" type="java.lang.String"/>
+            <form-property name="numExpediente" type="java.lang.String"/>
+            <form-property name="numLicencia" type="java.lang.String"/>
+            <form-property name="areAutPreCatastral" type="java.lang.String"/>
+            <form-property name="areAutViaPublica" type="java.lang.String"/>
+            <form-property name="areAutBienComun" type="java.lang.String"/>
+            <form-property name="areAutTotal" type="java.lang.String"/>
+            <form-property name="areVerPreCatastral" type="java.lang.String"/>
+            <form-property name="areVerViaPublica" type="java.lang.String"/>
+            <form-property name="areVerBienComun" type="java.lang.String"/>
+            <form-property name="areVerTotal" type="java.lang.String"/>
+            <form-property name="fecExpAutorizacion" type="java.lang.String"/>
+            <form-property name="fecVenAutorizacion" type="java.lang.String"/>
+            <form-property name="fecIniActividad" type="java.lang.String"/>
+            <!-- **************************************** -->
+            <!-- AUTORIZACION DE ANUNCIO -->
+            <form-property name="indListaAnuncio" type="java.lang.String"/>
+            <form-property name="codTipAnuncio" type="java.lang.String"/>
+            <form-property name="desTipAnuncio" type="java.lang.String"/>
+            <form-property name="numLados" type="java.lang.String"/>
+            <form-property name="areAutorizada" type="java.lang.String"/>
+            <form-property name="areVerificada" type="java.lang.String"/>
+            <form-property name="numExpAnuncio" type="java.lang.String"/>
+            <form-property name="numLicAnuncio" type="java.lang.String"/>
+            <form-property name="fecExpedicion" type="java.lang.String"/>
+            <form-property name="fecVencimiento" type="java.lang.String"/>
+            <!-- *********************** -->
+            <!-- INFORMACIÓN COMPLEMENTARIA -->
+            <form-property name="codConDeclarante" type="java.lang.String"/>
+            <form-property name="codEstLleFicha" type="java.lang.String"/>
+            <form-property name="codDocPresentado" type="java.lang.String"/>
+            <form-property name="codMantenimiento" type="java.lang.String"/>
+            <!-- ************************** -->
+        </form-bean>
+        <form-bean name="FichaBienComunDynaForm" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="numFicha" type="java.lang.String"/>
+            <form-property name="numFichLote" type="java.lang.String"/>
+            <form-property name="numTotFichLote" type="java.lang.String"/>
+            <form-property name="observacion" type="java.lang.String"/>
+            <form-property name="dniDeclarante" type="java.lang.String"/>
+            <form-property name="nomDeclarante" type="java.lang.String"/>
+            <form-property name="apePatDeclarante" type="java.lang.String"/>
+            <form-property name="apeMatDeclarante" type="java.lang.String"/>
+            <form-property name="fecFirDeclarante" type="java.lang.String"/>
+            <form-property name="idSupervisor" type="java.lang.String"/>
+            <form-property name="dniSupervisor" type="java.lang.String"/>
+            <form-property name="nomSupervisor" type="java.lang.String"/>
+            <form-property name="apeSupervisor" type="java.lang.String"/>
+            <form-property name="fecFirSupervisor" type="java.lang.String"/>
+            <form-property name="idTecnico" type="java.lang.String"/>
+            <form-property name="dniTecCatastral" type="java.lang.String"/>
+            <form-property name="nomTecCatastral" type="java.lang.String"/>
+            <form-property name="apeTecCatastral" type="java.lang.String"/>
+            <form-property name="fecFirTecCatastral" type="java.lang.String"/>
+            <form-property name="idVerificador" type="java.lang.String"/>
+            <form-property name="dniVerCatastral" type="java.lang.String"/>
+            <form-property name="nomVerCatastral" type="java.lang.String"/>
+            <form-property name="apeVerCatastral" type="java.lang.String"/>
+            <form-property name="fecFirVerCatastral" type="java.lang.String"/>
+            <form-property name="numRegVerCatastral" type="java.lang.String"/>
+            <form-property name="codEvaPreCatastral" type="java.lang.String"/>
+            <form-property name="areTerInvLotColindante" type="java.lang.String"/>
+            <form-property name="areTerInvJarAislamiento" type="java.lang.String"/>
+            <form-property name="areTerInvArePublica" type="java.lang.String"/>
+            <form-property name="areTerInvAreIntangible" type="java.lang.String"/>
+            <!-- CABECERA -->
+            <form-property name="cucA" type="java.lang.String"/>
+            <form-property name="cucB" type="java.lang.String"/>
+            <form-property name="codHojCatastral" type="java.lang.String"/>
+            <form-property name="codRefCatastral" type="java.lang.String"/>
+            <form-property name="codRefCatastralRural" type="java.lang.String"/>
+            <form-property name="dpto" type="java.lang.String"/>
+            <form-property name="prov" type="java.lang.String"/>
+            <form-property name="dist" type="java.lang.String"/>
+            <form-property name="sector" type="java.lang.String"/>
+            <form-property name="manzana" type="java.lang.String"/>
+            <form-property name="lote" type="java.lang.String"/>
+            <form-property name="edifica" type="java.lang.String"/>
+            <form-property name="piso" type="java.lang.String"/>
+            <form-property name="entrada" type="java.lang.String"/>
+            <form-property name="unidad" type="java.lang.String"/>
+            <form-property name="dc" type="java.lang.String"/>
+            <form-property name="codConRenta" type="java.lang.String"/>
+            <form-property name="codPreRenta" type="java.lang.String"/>
+            <form-property name="uniAcuCodPreRenta" type="java.lang.String"/>
+            <form-property name="zona" type="java.lang.String"/>
+            <form-property name="uniOrgCatRural" type="java.lang.String"/>
+            <form-property name="uniCatastral" type="java.lang.String"/>
+            <form-property name="coorEste" type="java.lang.String"/>
+            <form-property name="coorNorte" type="java.lang.String"/>
+            <!-- ******** -->
+            <!-- UBICACION DEL BIEN COMUN -->
+            <form-property name="indListaVia" type="java.lang.String"/>
+            <form-property name="codTipEdificacionPre" type="java.lang.String"/>
+            <form-property name="nomEdificacionPre" type="java.lang.String"/>
+            <form-property name="codTipInteriorPre" type="java.lang.String"/>
+            <form-property name="numInteriorPre" type="java.lang.String"/>
+            <form-property name="codHUPre" type="java.lang.String"/>
+            <form-property name="nomHUPre" type="java.lang.String"/>
+            <form-property name="sectorPre" type="java.lang.String"/>
+            <form-property name="manzanaPre" type="java.lang.String"/>
+            <form-property name="lotePre" type="java.lang.String"/>
+            <form-property name="sublotePre" type="java.lang.String"/>
+                <!-- VIA -->
+                <form-property name="codVia" type="java.lang.String"/>
+                <form-property name="codTipVia" type="java.lang.String"/>
+                <form-property name="desTipVia" type="java.lang.String"/>
+                <form-property name="nomVia" type="java.lang.String"/>
+                <form-property name="codTipPuerta" type="java.lang.String"/>
+                <form-property name="desTipPuerta" type="java.lang.String"/>
+                <form-property name="numMunicipal" type="java.lang.String"/>
+                <form-property name="codConNumeracion" type="java.lang.String"/>
+                <form-property name="desConNumeracion" type="java.lang.String"/>
+                <form-property name="numCerNumeracion" type="java.lang.String"/>
+                <!-- *** -->
+            <!-- ****************************** -->
+            <!-- DESCRIPCION DEL BIEN COMUN -->
+            <form-property name="codClaPredio" type="java.lang.String"/>
+            <form-property name="codSubClaPredio" type="java.lang.String"/>
+            <form-property name="codUbiPreCatastral" type="java.lang.String"/>
+            <form-property name="codUsoPreCatastral" type="java.lang.String"/>
+            <form-property name="desUsoPreCatastral" type="java.lang.String"/>
+            <form-property name="estructuracion" type="java.lang.String"/>
+            <form-property name="zonificacion" type="java.lang.String"/>
+            <form-property name="areTerTitulo" type="java.lang.String"/>
+            <form-property name="areTerVerificada" type="java.lang.String"/>
+            <form-property name="medCamFrente" type="java.lang.String"/>
+            <form-property name="medTitFrente" type="java.lang.String"/>
+            <form-property name="colCamFrente" type="java.lang.String"/>
+            <form-property name="colTitFrente" type="java.lang.String"/>
+            <form-property name="medCamDerecha" type="java.lang.String"/>
+            <form-property name="medTitDerecha" type="java.lang.String"/>
+            <form-property name="colCamDerecha" type="java.lang.String"/>
+            <form-property name="colTitDerecha" type="java.lang.String"/>
+            <form-property name="medCamIzquierda" type="java.lang.String"/>
+            <form-property name="medTitIzquierda" type="java.lang.String"/>
+            <form-property name="colCamIzquierda" type="java.lang.String"/>
+            <form-property name="colTitIzquierda" type="java.lang.String"/>
+            <form-property name="medCamFondo" type="java.lang.String"/>
+            <form-property name="medTitFondo" type="java.lang.String"/>
+            <form-property name="colCamFondo" type="java.lang.String"/>
+            <form-property name="colTitFondo" type="java.lang.String"/>
+            <!-- ********************** -->
+            <!-- SERVICIOS BASICOS -->
+            <form-property name="luz" type="java.lang.String"/>
+            <form-property name="numSumLuz" type="java.lang.String"/>
+            <form-property name="agua" type="java.lang.String"/>
+            <form-property name="numConAgua" type="java.lang.String"/>
+            <form-property name="telefono" type="java.lang.String"/>
+            <form-property name="numTelefono" type="java.lang.String"/>
+            <form-property name="desague" type="java.lang.String"/>
+            <!-- ***************** -->
+            <!-- CONSTRUCCIONES -->
+            <form-property name="indListaConstruccion" type="java.lang.String"/>
+                <!-- LISTA CONSTRUCCIONES -->
+                <form-property name="numPiso" type="java.lang.String"/>
+                <form-property name="fecConstruccion" type="java.lang.String"/>
+                <form-property name="codMEP" type="java.lang.String"/>
+                <form-property name="desMEP" type="java.lang.String"/>
+                <form-property name="codECC" type="java.lang.String"/>
+                <form-property name="desECC" type="java.lang.String"/>
+                <form-property name="codECS" type="java.lang.String"/>
+                <form-property name="desECS" type="java.lang.String"/>
+                <form-property name="muro" type="java.lang.String"/>
+                <form-property name="techo" type="java.lang.String"/>
+                <form-property name="pisos" type="java.lang.String"/>
+                <form-property name="puerta" type="java.lang.String"/>
+                <form-property name="revestimiento" type="java.lang.String"/>
+                <form-property name="bano" type="java.lang.String"/>
+                <form-property name="instalaciones" type="java.lang.String"/>
+                <form-property name="areConDeclarada" type="java.lang.String"/>
+                <form-property name="areConVerificada" type="java.lang.String"/>
+                <form-property name="codUCA" type="java.lang.String"/>
+                <form-property name="desUCA" type="java.lang.String"/>
+                <!-- ******************** -->
+            <!-- ************** -->
+            <!-- OBRAS COMPLEMENTARIAS -->
+            <form-property name="indListaObra" type="java.lang.String"/>
+            <form-property name="codInstalacion" type="java.lang.String"/>
+            <form-property name="desInstalacion" type="java.lang.String"/>
+            <form-property name="largo" type="java.lang.String"/>
+            <form-property name="ancho" type="java.lang.String"/>
+            <form-property name="alto" type="java.lang.String"/>
+            <form-property name="total" type="java.lang.String"/>
+            <form-property name="uniMedida" type="java.lang.String"/>
+            <!-- ********************* -->
+            <!-- RECAPITULACION DE EDIFICIOS -->
+            <form-property name="indListaRecEdificio" type="java.lang.String"/>
+            <form-property name="edificio" type="java.lang.String"/>
+            <form-property name="porcentaje" type="java.lang.String"/>
+            <form-property name="atc" type="java.lang.String"/>
+            <form-property name="acc" type="java.lang.String"/>
+            <form-property name="aoic" type="java.lang.String"/>
+            <!-- *************************** -->
+            <!-- RECAPITULACION DE BIENES COMUNES -->
+            <form-property name="indListaRecBienComun" type="java.lang.String"/>
+            <form-property name="numero" type="java.lang.String"/>
+            <form-property name="edificacion" type="java.lang.String"/>
+            <!-- *************************** -->
+            <!-- DOCUMENTOS -->
+            <form-property name="nomNotaria" type="java.lang.String"/>
+            <form-property name="kardex" type="java.lang.String"/>
+            <form-property name="fecEscPublica" type="java.lang.String"/>
+            <!-- ********** -->
+            <!-- INSCRIPCIÓN DEL PREDIO CATASTRAL EN EL REGISTRO DE PREDIOS -->
+            <form-property name="codTipParRegistral" type="java.lang.String"/>
+            <form-property name="numPartida" type="java.lang.String"/>
+            <form-property name="fojas" type="java.lang.String"/>
+            <form-property name="asiento" type="java.lang.String"/>
+            <form-property name="fecInsPredio" type="java.lang.String"/>
+            <form-property name="codDecFabrica" type="java.lang.String"/>
+            <form-property name="asiInsFabrica" type="java.lang.String"/>
+            <form-property name="fecInsFabrica" type="java.lang.String"/>
+            <!-- ********************************************************** -->
+            <!-- INFORMACIÓN COMPLEMENTARIA -->
+            <form-property name="codConDeclarante" type="java.lang.String"/>
+            <form-property name="codEstLleFicha" type="java.lang.String"/>
+            <form-property name="codMantenimiento" type="java.lang.String"/>
+            <!-- ************************** -->
+        </form-bean>
+        <form-bean name="FichaRuralDynaForm" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="numFicha" type="java.lang.String"/>
+            <form-property name="numFichLote" type="java.lang.String"/>
+            <form-property name="numTotFichLote" type="java.lang.String"/>
+            <form-property name="observacion" type="java.lang.String"/>
+            <form-property name="dniDeclarante" type="java.lang.String"/>
+            <form-property name="nomDeclarante" type="java.lang.String"/>
+            <form-property name="apePatDeclarante" type="java.lang.String"/>
+            <form-property name="apeMatDeclarante" type="java.lang.String"/>
+            <form-property name="fecFirDeclarante" type="java.lang.String"/>
+            <form-property name="idSupervisor" type="java.lang.String"/>
+            <form-property name="dniSupervisor" type="java.lang.String"/>
+            <form-property name="nomSupervisor" type="java.lang.String"/>
+            <form-property name="apeSupervisor" type="java.lang.String"/>
+            <form-property name="fecFirSupervisor" type="java.lang.String"/>
+            <form-property name="idTecnico" type="java.lang.String"/>
+            <form-property name="dniTecCatastral" type="java.lang.String"/>
+            <form-property name="nomTecCatastral" type="java.lang.String"/>
+            <form-property name="apeTecCatastral" type="java.lang.String"/>
+            <form-property name="fecFirTecCatastral" type="java.lang.String"/>
+            <form-property name="idVerificador" type="java.lang.String"/>
+            <form-property name="dniVerCatastral" type="java.lang.String"/>
+            <form-property name="nomVerCatastral" type="java.lang.String"/>
+            <form-property name="apeVerCatastral" type="java.lang.String"/>
+            <form-property name="fecFirVerCatastral" type="java.lang.String"/>
+            <form-property name="numRegVerCatastral" type="java.lang.String"/>
+            <form-property name="codEvaPreCatastral" type="java.lang.String"/>
+            <form-property name="areTerInvLotColindante" type="java.lang.String"/>
+            <form-property name="areTerInvJarAislamiento" type="java.lang.String"/>
+            <form-property name="areTerInvArePublica" type="java.lang.String"/>
+            <form-property name="areTerInvAreIntangible" type="java.lang.String"/>
+            <!-- CABECERA -->
+            <form-property name="cucA" type="java.lang.String"/>
+            <form-property name="cucB" type="java.lang.String"/>
+            <form-property name="codHojCatastral" type="java.lang.String"/>
+            <form-property name="codRefCatastral" type="java.lang.String"/>
+            <form-property name="codRefCatastralRural" type="java.lang.String"/>
+            <form-property name="dpto" type="java.lang.String"/>
+            <form-property name="prov" type="java.lang.String"/>
+            <form-property name="dist" type="java.lang.String"/>
+            <form-property name="sector" type="java.lang.String"/>
+            <form-property name="manzana" type="java.lang.String"/>
+            <form-property name="lote" type="java.lang.String"/>
+            <form-property name="edifica" type="java.lang.String"/>
+            <form-property name="piso" type="java.lang.String"/>
+            <form-property name="entrada" type="java.lang.String"/>
+            <form-property name="unidad" type="java.lang.String"/>
+            <form-property name="dc" type="java.lang.String"/>
+            <form-property name="codConRenta" type="java.lang.String"/>
+            <form-property name="codPreRenta" type="java.lang.String"/>
+            <form-property name="uniAcuCodPreRenta" type="java.lang.String"/>
+            <form-property name="zona" type="java.lang.String"/>
+            <form-property name="uniOrgCatRural" type="java.lang.String"/>
+            <form-property name="uniCatastral" type="java.lang.String"/>
+            <form-property name="coorEste" type="java.lang.String"/>
+            <form-property name="coorNorte" type="java.lang.String"/>
+            <!-- ******** -->
+            <!-- UBICACION GEOGRÁFICA -->
+            <form-property name="nomPredio" type="java.lang.String"/>
+            <form-property name="nomValle" type="java.lang.String"/>
+            <form-property name="nomSector" type="java.lang.String"/>
+            <form-property name="codProyecto" type="java.lang.String"/>
+            <form-property name="numFoto" type="java.lang.String"/>
+            <form-property name="numOrtofoto" type="java.lang.String"/>
+            <form-property name="codImagen" type="java.lang.String"/>
+            <form-property name="uniCatAnterior" type="java.lang.String"/>
+            <!-- ******************** -->
+            <!-- IDENTIFICACION DEL TITULAR -->
+            <form-property name="codTipTitular" type="java.lang.String"/>
+            <form-property name="codTipDocIdentidad" type="java.lang.String"/>
+            <form-property name="numDocIdentidad" type="java.lang.String"/>
+            <form-property name="codEstCivil" type="java.lang.String"/>
+            <form-property name="nombre" type="java.lang.String"/>
+            <form-property name="apePaterno" type="java.lang.String"/>
+            <form-property name="apeMaterno" type="java.lang.String"/>
+            <form-property name="numRuc" type="java.lang.String"/>
+            <form-property name="razSocial" type="java.lang.String"/>
+            <form-property name="codConEspTitular" type="java.lang.String"/>
+            <form-property name="codPerJuridica" type="java.lang.String"/>
+            <form-property name="numResExoneracion" type="java.lang.String"/>
+            <form-property name="numBolPensionista" type="java.lang.String"/>
+            <form-property name="fecIniExoneracion" type="java.lang.String"/>
+            <form-property name="fecVenExoneracion" type="java.lang.String"/>
+            <!-- ************************** -->
+            <!-- DESCRIPCION DEL PREDIO -->
+            <form-property name="codUso" type="java.lang.String"/>
+            <form-property name="codClaUsoActual" type="java.lang.String"/>
+            <!-- ********************** -->
+            <!-- CONDICIÓN DEL PREDIO -->
+            <form-property name="codConTitular" type="java.lang.String"/>
+            <form-property name="fecOcupacion" type="java.lang.String"/>
+            <form-property name="codTipParRegistral" type="java.lang.String"/>
+            <form-property name="numInscripcion" type="java.lang.String"/>
+            <form-property name="fecInscripcion" type="java.lang.String"/>
+            <form-property name="codForAdqPredio" type="java.lang.String"/>
+            <!-- ******************** -->
+            <!-- CARACTERÍSTICAS TÉCNICAS DEL PREDIO -->
+            <form-property name="areTerTitulo" type="java.lang.String"/>
+            <form-property name="areTerDeclarada" type="java.lang.String"/>
+            <form-property name="codConInstalacion" type="java.lang.String"/>
+            <!-- *********************************** -->
+            <!-- DOMICILIO DEL TITULAR -->
+            <form-property name="codDepartamento" type="java.lang.String"/>
+            <form-property name="codProvincia" type="java.lang.String"/>
+            <form-property name="codDistrito" type="java.lang.String"/>
+            <form-property name="sectorTit" type="java.lang.String"/>
+            <form-property name="nomViaTit" type="java.lang.String"/>
+            <form-property name="loteTit" type="java.lang.String"/>
+            <form-property name="nomPredioTit" type="java.lang.String"/>
+            <!-- ********************* -->
+            <!-- DOCUMENTOS -->
+            <form-property name="indListaDocumento" type="java.lang.String"/>
+            <form-property name="nomDocumento" type="java.lang.String"/>
+            <form-property name="codForPresentacion" type="java.lang.String"/>
+            <form-property name="desForPresentacion" type="java.lang.String"/>
+            <form-property name="indListaConstruccion" type="java.lang.String"/>
+            <!-- ********** -->
+            <!-- INFORMACIÓN DEL COTITULAR CATASTRAL -->
+            <form-property name="indListaCotRural" type="java.lang.String"/>
+            <form-property name="desTipDocIdentidad" type="java.lang.String"/>
+            <form-property name="desEstCivil" type="java.lang.String"/>
+            <!-- *********************************** -->
+            <!-- INFORMACIÓN COMPLEMENTARIA -->
+            <form-property name="indListaLitigante" type="java.lang.String"/>
+            <form-property name="numDocumento" type="java.lang.String"/>
+            <form-property name="nomCompleto" type="java.lang.String"/>
+            <form-property name="nomLitigante" type="java.lang.String"/>
+            <form-property name="apePatLitigante" type="java.lang.String"/>
+            <form-property name="apeMatLitigante" type="java.lang.String"/>
+            <!-- ************************** -->
+        </form-bean>
+        <form-bean name="FichaCultutalPrehispanicoDynaForm" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="numFicha" type="java.lang.String"/>
+            <form-property name="numFichLote" type="java.lang.String"/>
+            <form-property name="numTotFichLote" type="java.lang.String"/>
+            <form-property name="observacion" type="java.lang.String"/>
+            <form-property name="dniDeclarante" type="java.lang.String"/>
+            <form-property name="nomDeclarante" type="java.lang.String"/>
+            <form-property name="apePatDeclarante" type="java.lang.String"/>
+            <form-property name="apeMatDeclarante" type="java.lang.String"/>
+            <form-property name="fecFirDeclarante" type="java.lang.String"/>
+            <form-property name="idSupervisor" type="java.lang.String"/>
+            <form-property name="dniSupervisor" type="java.lang.String"/>
+            <form-property name="nomSupervisor" type="java.lang.String"/>
+            <form-property name="apeSupervisor" type="java.lang.String"/>
+            <form-property name="fecFirSupervisor" type="java.lang.String"/>
+            <form-property name="idTecnico" type="java.lang.String"/>
+            <form-property name="dniTecCatastral" type="java.lang.String"/>
+            <form-property name="nomTecCatastral" type="java.lang.String"/>
+            <form-property name="apeTecCatastral" type="java.lang.String"/>
+            <form-property name="fecFirTecCatastral" type="java.lang.String"/>
+            <form-property name="idVerificador" type="java.lang.String"/>
+            <form-property name="dniVerCatastral" type="java.lang.String"/>
+            <form-property name="nomVerCatastral" type="java.lang.String"/>
+            <form-property name="apeVerCatastral" type="java.lang.String"/>
+            <form-property name="fecFirVerCatastral" type="java.lang.String"/>
+            <form-property name="numRegVerCatastral" type="java.lang.String"/>
+            <!-- CABECERA -->
+            <form-property name="cucA" type="java.lang.String"/>
+            <form-property name="cucB" type="java.lang.String"/>
+            <form-property name="codHojCatastral" type="java.lang.String"/>
+            <form-property name="codRefCatastral" type="java.lang.String"/>
+            <form-property name="codRefCatastralRural" type="java.lang.String"/>
+            <form-property name="dpto" type="java.lang.String"/>
+            <form-property name="prov" type="java.lang.String"/>
+            <form-property name="dist" type="java.lang.String"/>
+            <form-property name="sector" type="java.lang.String"/>
+            <form-property name="manzana" type="java.lang.String"/>
+            <form-property name="lote" type="java.lang.String"/>
+            <form-property name="edifica" type="java.lang.String"/>
+            <form-property name="piso" type="java.lang.String"/>
+            <form-property name="entrada" type="java.lang.String"/>
+            <form-property name="unidad" type="java.lang.String"/>
+            <form-property name="dc" type="java.lang.String"/>
+            <form-property name="codConRenta" type="java.lang.String"/>
+            <form-property name="codPreRenta" type="java.lang.String"/>
+            <form-property name="uniAcuCodPreRenta" type="java.lang.String"/>
+            <form-property name="zona" type="java.lang.String"/>
+            <form-property name="uniOrgCatRural" type="java.lang.String"/>
+            <form-property name="uniCatastral" type="java.lang.String"/>
+            <form-property name="coorEste" type="java.lang.String"/>
+            <form-property name="coorNorte" type="java.lang.String"/>
+            <!-- ******** -->
+            <!-- DESCRIPCION DEL BIEN CULTURAL -->
+            <form-property name="codCatInmueble" type="java.lang.String"/>
+            <form-property name="codMonumento" type="java.lang.String"/>
+            <form-property name="nomMonumento" type="java.lang.String"/>
+            <form-property name="areMonumento" type="java.lang.String"/>
+            <form-property name="uniAreMonumento" type="java.lang.String"/>
+            <form-property name="perimetro" type="java.lang.String"/>
+            <form-property name="codFilCronologica" type="java.lang.String"/>
+            <!-- ***************************** -->
+            <!-- CONDICIONES FISICAS DEL MONUMENTO ARQUEOLOGICO -->
+            <form-property name="preArquitectura" type="java.lang.String"/>
+            <form-property name="codTipArquitectura" type="java.lang.String"/>
+            <form-property name="codTipMatConstructivo" type="java.lang.String"/>
+            <!-- ********************************************** -->
+            <!-- ESTADO DE CONSERVACION -->
+            <form-property name="codAfeNatural" type="java.lang.String"/>
+            <form-property name="codAfeAntropofica" type="java.lang.String"/>
+            <form-property name="codIntConservacion" type="java.lang.String"/>
+            <!-- ********************** -->
+            <!-- INSCRIPCION DEL PREDIO CATASTRAL EN EL REGISTRO DE PREDIOS -->
+            <form-property name="codTipParRegistral" type="java.lang.String"/>
+            <form-property name="numPartida" type="java.lang.String"/>
+            <form-property name="fojas" type="java.lang.String"/>
+            <form-property name="asiento" type="java.lang.String"/>
+            <form-property name="fecInsPredio" type="java.lang.String"/>
+            <!-- ********************************************************** -->
+            <!-- NORMA LEGAL -->
+            <form-property name="indListaNormaLegal" type="java.lang.String"/>
+            <form-property name="numNorma" type="java.lang.String"/>
+            <form-property name="fecNorma" type="java.lang.String"/>
+            <form-property name="numPlano" type="java.lang.String"/>
+            <!-- *********** -->
+        </form-bean>
+        <form-bean name="FichaCultutalColonialDynaForm" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="numFicha" type="java.lang.String"/>
+            <form-property name="numFichLote" type="java.lang.String"/>
+            <form-property name="numTotFichLote" type="java.lang.String"/>
+            <form-property name="observacion" type="java.lang.String"/>
+            <form-property name="dniDeclarante" type="java.lang.String"/>
+            <form-property name="nomDeclarante" type="java.lang.String"/>
+            <form-property name="apePatDeclarante" type="java.lang.String"/>
+            <form-property name="apeMatDeclarante" type="java.lang.String"/>
+            <form-property name="fecFirDeclarante" type="java.lang.String"/>
+            <form-property name="idSupervisor" type="java.lang.String"/>
+            <form-property name="dniSupervisor" type="java.lang.String"/>
+            <form-property name="nomSupervisor" type="java.lang.String"/>
+            <form-property name="apeSupervisor" type="java.lang.String"/>
+            <form-property name="fecFirSupervisor" type="java.lang.String"/>
+            <form-property name="idTecnico" type="java.lang.String"/>
+            <form-property name="dniTecCatastral" type="java.lang.String"/>
+            <form-property name="nomTecCatastral" type="java.lang.String"/>
+            <form-property name="apeTecCatastral" type="java.lang.String"/>
+            <form-property name="fecFirTecCatastral" type="java.lang.String"/>
+            <form-property name="idVerificador" type="java.lang.String"/>
+            <form-property name="dniVerCatastral" type="java.lang.String"/>
+            <form-property name="nomVerCatastral" type="java.lang.String"/>
+            <form-property name="apeVerCatastral" type="java.lang.String"/>
+            <form-property name="fecFirVerCatastral" type="java.lang.String"/>
+            <form-property name="numRegVerCatastral" type="java.lang.String"/>
+            <!-- CABECERA -->
+            <form-property name="cucA" type="java.lang.String"/>
+            <form-property name="cucB" type="java.lang.String"/>
+            <form-property name="codHojCatastral" type="java.lang.String"/>
+            <form-property name="codRefCatastral" type="java.lang.String"/>
+            <form-property name="codRefCatastralRural" type="java.lang.String"/>
+            <form-property name="dpto" type="java.lang.String"/>
+            <form-property name="prov" type="java.lang.String"/>
+            <form-property name="dist" type="java.lang.String"/>
+            <form-property name="sector" type="java.lang.String"/>
+            <form-property name="manzana" type="java.lang.String"/>
+            <form-property name="lote" type="java.lang.String"/>
+            <form-property name="edifica" type="java.lang.String"/>
+            <form-property name="piso" type="java.lang.String"/>
+            <form-property name="entrada" type="java.lang.String"/>
+            <form-property name="unidad" type="java.lang.String"/>
+            <form-property name="dc" type="java.lang.String"/>
+            <form-property name="codConRenta" type="java.lang.String"/>
+            <form-property name="codPreRenta" type="java.lang.String"/>
+            <form-property name="uniAcuCodPreRenta" type="java.lang.String"/>
+            <form-property name="zona" type="java.lang.String"/>
+            <form-property name="uniOrgCatRural" type="java.lang.String"/>
+            <form-property name="uniCatastral" type="java.lang.String"/>
+            <form-property name="coorEste" type="java.lang.String"/>
+            <form-property name="coorNorte" type="java.lang.String"/>
+            <!-- ******** -->
+            <!-- INFORMACIÓN BÁSICA -->
+            <form-property name="patrimonio" type="java.lang.String"/>
+            <form-property name="denominacion" type="java.lang.String"/>
+            <!-- ****************** -->
+            <!-- IDENTIFICACION DEL TITULAR -->
+            <form-property name="codTipTitular" type="java.lang.String"/>
+            <form-property name="codTipDocIdentidad" type="java.lang.String"/>
+            <form-property name="numDocIdentidad" type="java.lang.String"/>
+            <form-property name="codEstCivil" type="java.lang.String"/>
+            <form-property name="nombre" type="java.lang.String"/>
+            <form-property name="apePaterno" type="java.lang.String"/>
+            <form-property name="apeMaterno" type="java.lang.String"/>
+            <form-property name="numRuc" type="java.lang.String"/>
+            <form-property name="razSocial" type="java.lang.String"/>
+            <form-property name="codConEspTitular" type="java.lang.String"/>
+            <form-property name="codPerJuridica" type="java.lang.String"/>
+            <!-- ************************** -->
+            <!-- DESCRIPCIÓN DEL MONUMENTO INTEGRANTE DEL PATRIMONIO CULTURAL DE LA NACIÓN -->
+            <form-property name="codTipArqColonial" type="java.lang.String"/>
+            <form-property name="usoActual" type="java.lang.String"/>
+            <form-property name="usoOriginal" type="java.lang.String"/>
+            <form-property name="numPisos" type="java.lang.String"/>
+            <form-property name="fecConstruccion" type="java.lang.String"/>
+            <form-property name="areTerrTitulo" type="java.lang.String"/>
+            <form-property name="areConstruida" type="java.lang.String"/>
+            <form-property name="areLibre" type="java.lang.String"/>
+            <form-property name="portada" type="java.lang.String"/>
+            <form-property name="balcon" type="java.lang.String"/>
+            <form-property name="pilastra" type="java.lang.String"/>
+            <form-property name="moldadura" type="java.lang.String"/>
+            <form-property name="cornisa" type="java.lang.String"/>
+            <form-property name="ventana" type="java.lang.String"/>
+            <form-property name="balaustrada" type="java.lang.String"/>
+            <form-property name="reja" type="java.lang.String"/>
+            <form-property name="otros" type="java.lang.String"/>
+            <form-property name="desFachada" type="java.lang.String"/>
+            <form-property name="desInterior" type="java.lang.String"/>
+            <form-property name="estCimiento" type="java.lang.String"/>
+            <form-property name="estMuro" type="java.lang.String"/>
+            <form-property name="estPiso" type="java.lang.String"/>
+            <form-property name="estTecho" type="java.lang.String"/>
+            <form-property name="estPilastra" type="java.lang.String"/>
+            <form-property name="estRevestimiento" type="java.lang.String"/>
+            <form-property name="estBalcon" type="java.lang.String"/>
+            <form-property name="estPuerta" type="java.lang.String"/>
+            <form-property name="estVentana" type="java.lang.String"/>
+            <form-property name="estReja" type="java.lang.String"/>
+            <form-property name="estOtros" type="java.lang.String"/>
+            <form-property name="codFilEstilistica" type="java.lang.String"/>
+            <form-property name="codIntInmueble" type="java.lang.String"/>
+            <form-property name="resHistorica" type="java.lang.String"/>
+            <!-- ************************************************************************* -->
+            <!-- INSCRIPCION DEL PREDIO CATASTRAL EN EL REGISTRO DE PREDIOS -->
+            <form-property name="codTipParRegistral" type="java.lang.String"/>
+            <form-property name="numPartida" type="java.lang.String"/>
+            <form-property name="fojas" type="java.lang.String"/>
+            <form-property name="asiento" type="java.lang.String"/>
+            <form-property name="fecInsPredio" type="java.lang.String"/>
+            <!-- ********************************************************** -->
+            <!-- INFORMACIÓN COMPLEMENTARIA -->
+            <form-property name="indListaLitigante" type="java.lang.String"/>
+            <form-property name="codConDeclarante" type="java.lang.String"/>
+            <form-property name="codEstLleFicha" type="java.lang.String"/>
+            <form-property name="numHabitantes" type="java.lang.String"/>
+            <form-property name="numFamilias" type="java.lang.String"/>
+            <form-property name="desTipDocIdentidad" type="java.lang.String"/>
+            <form-property name="numDocumento" type="java.lang.String"/>
+            <form-property name="nomCompleto" type="java.lang.String"/>
+            <form-property name="nomLitigante" type="java.lang.String"/>
+            <form-property name="apePatLitigante" type="java.lang.String"/>
+            <form-property name="apeMatLitigante" type="java.lang.String"/>
+            <form-property name="codContribuyente" type="java.lang.String"/>
+            <!-- ************************** -->
+            <!-- NORMA LEGAL -->
+            <form-property name="indListaNormaLegal" type="java.lang.String"/>
+            <form-property name="numNorma" type="java.lang.String"/>
+            <form-property name="fecNorma" type="java.lang.String"/>
+            <form-property name="numPlano" type="java.lang.String"/>
+            <!-- *********** -->
+        </form-bean>
+        <form-bean name="MaestroDynaForm" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="codTabla" type="java.lang.String"/>
+            <form-property name="descTabla" type="java.lang.String"/>
+            <form-property name="data" type="java.lang.String"/>
+            <form-property name="indice" type="java.lang.String"/>
+        </form-bean>
+
+        <!-- NUEVAS FUNCIONALIDADES PARA REPORTES Y MANTENIMIENTOS EN POSTGRES-->
+        <!-- ***************************************************************** -->
+        <form-bean name="ReporteUsuarioDynaForm" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="sector" type="java.lang.String"/>
+            <form-property name="tipoUbicacion" type="java.lang.String"/>
+            <form-property name="urbanizacion" type="java.lang.String"/>
+            <form-property name="manzana" type="java.lang.String"/>
+            <form-property name="lote" type="java.lang.String"/>
+            <form-property name="tipoVia" type="java.lang.String"/>
+            <form-property name="nombreVia" type="java.lang.String"/>
+            <form-property name="numCalle" type="java.lang.String"/>
+            <form-property name="apePaterno" type="java.lang.String"/>
+            <form-property name="apeMaterno" type="java.lang.String"/>
+            <form-property name="nombre" type="java.lang.String"/>
+            <form-property name="area" type="java.lang.String"/>
+            <form-property name="tipoDocumento" type="java.lang.String"/>
+            <form-property name="numDocumento" type="java.lang.String"/>
+            <form-property name="tipoCodigo" type="java.lang.String"/>
+            <form-property name="codDocumento" type="java.lang.String"/>
+            <form-property name="clasificacionPredio" type="java.lang.String"/>
+            <form-property name="otrosPredio" type="java.lang.String"/>
+            <form-property name="codUso" type="java.lang.String"/>
+            <form-property name="activo" type="java.lang.String"/>
+        </form-bean>
+        <form-bean name="ReporteAdministradorDynaForm" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="estado" type="java.lang.String"/>
+            <form-property name="digitador" type="java.lang.String"/>
+            <form-property name="fecInicio" type="java.lang.String"/>
+            <form-property name="fecFin" type="java.lang.String"/>
+        </form-bean>
+	<form-bean name="ConsultaUsosDynaForm" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="codigoUso" type="java.lang.String"/>
+            <form-property name="descripcionUso" type="java.lang.String"/>
+            <form-property name="actCodigoUso" type="java.lang.String"/>
+            <form-property name="actDescripcionUso" type="java.lang.String"/>
+        </form-bean>
+        <form-bean name="NuevoUsoDynaForm" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="codigoUso" type="java.lang.String"/>
+            <form-property name="descripcionUso" type="java.lang.String"/>
+        </form-bean>
+        <form-bean name="ActualizarUsoDynaForm" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="codigoUso" type="java.lang.String"/>
+            <form-property name="descripcionUso" type="java.lang.String"/>
+        </form-bean>
+        <form-bean name="ConsultaUsosBCDynaForm" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="codigoUsoBC" type="java.lang.String"/>
+            <form-property name="descripcionUsoBC" type="java.lang.String"/>
+            <form-property name="actCodigoUsoBC" type="java.lang.String"/>
+            <form-property name="actDescripcionUsoBC" type="java.lang.String"/>
+        </form-bean>
+        <form-bean name="NuevoUsoBCDynaForm" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="codigoUsoBC" type="java.lang.String"/>
+            <form-property name="descripcionUsoBC" type="java.lang.String"/>
+        </form-bean>
+        <form-bean name="ActualizarUsoBCDynaForm" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="codigoUsoBC" type="java.lang.String"/>
+            <form-property name="descripcionUsoBC" type="java.lang.String"/>
+        </form-bean>
+        <form-bean name="ConsultaNotariaDynaForm" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="codigoNotaria" type="java.lang.String"/>
+            <form-property name="nombreNotaria" type="java.lang.String"/>
+            <form-property name="codigoUbigeo" type="java.lang.String"/>
+            <form-property name="actCodigoNotaria" type="java.lang.String"/>
+            <form-property name="actNombreNotaria" type="java.lang.String"/>
+            <form-property name="actCodigoUbigeo" type="java.lang.String"/>
+        </form-bean>
+        <form-bean name="NuevaNotariaDynaForm" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="codigoNotaria" type="java.lang.String"/>
+            <form-property name="nombreNotaria" type="java.lang.String"/>
+            <form-property name="codigoUbigeo" type="java.lang.String"/>
+        </form-bean>
+        <form-bean name="ActualizarNotariaDynaForm" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="codigoNotaria" type="java.lang.String"/>
+            <form-property name="nombreNotaria" type="java.lang.String"/>
+            <form-property name="codigoUbigeo" type="java.lang.String"/>
+        </form-bean>
+        <form-bean name="ConsultaUbigeoDynaForm" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="codigoUbigeo" type="java.lang.String"/>
+            <form-property name="nombreUbigeo" type="java.lang.String"/>
+            <form-property name="cucDesde" type="java.lang.String"/>
+            <form-property name="cucHasta" type="java.lang.String"/>
+            <form-property name="ultimoCuc" type="java.lang.String"/>
+            <form-property name="actCodigoUbigeo" type="java.lang.String"/>
+            <form-property name="actNombreUbigeo" type="java.lang.String"/>
+            <form-property name="actCucDesde" type="java.lang.String"/>
+            <form-property name="actCucHasta" type="java.lang.String"/>
+            <form-property name="actUltimoCuc" type="java.lang.String"/>
+        </form-bean>
+        <form-bean name="NuevoUbigeoDynaForm" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="codigoUbigeo" type="java.lang.String"/>
+            <form-property name="nombreUbigeo" type="java.lang.String"/>
+            <form-property name="cucDesde" type="java.lang.String"/>
+            <form-property name="cucHasta" type="java.lang.String"/>
+            <form-property name="ultimoCuc" type="java.lang.String"/>
+            <form-property name="departamento" type="java.lang.String"/>
+            <form-property name="provincia" type="java.lang.String"/>
+            <form-property name="distrito" type="java.lang.String"/>
+        </form-bean>
+        <form-bean name="ActualizarUbigeoDynaForm" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="codigoUbigeo" type="java.lang.String"/>
+            <form-property name="nombreUbigeo" type="java.lang.String"/>
+            <form-property name="cucDesde" type="java.lang.String"/>
+            <form-property name="cucHasta" type="java.lang.String"/>
+            <form-property name="ultimoCuc" type="java.lang.String"/>
+        </form-bean>
+        <form-bean name="ConsultaCodInstalacionDynaForm" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="codigoInstalacion" type="java.lang.String"/>
+            <form-property name="descripcionInstalacion" type="java.lang.String"/>
+            <form-property name="unidad" type="java.lang.String"/>
+            <form-property name="material" type="java.lang.String"/>
+            <form-property name="actCodigoInstalacion" type="java.lang.String"/>
+            <form-property name="actDescripcionInstalacion" type="java.lang.String"/>
+            <form-property name="actUnidad" type="java.lang.String"/>
+            <form-property name="actMaterial" type="java.lang.String"/>
+        </form-bean>
+        <form-bean name="NuevoCodInstalacionDynaForm" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="codigoInstalacion" type="java.lang.String"/>
+            <form-property name="descripcionInstalacion" type="java.lang.String"/>
+            <form-property name="unidad" type="java.lang.String"/>
+            <form-property name="material" type="java.lang.String"/>
+        </form-bean>
+        <form-bean name="ActualizarCodInstalacionDynaForm" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="codigoInstalacion" type="java.lang.String"/>
+            <form-property name="descripcionInstalacion" type="java.lang.String"/>
+            <form-property name="unidad" type="java.lang.String"/>
+            <form-property name="material" type="java.lang.String"/>
+        </form-bean>
+        <form-bean name="ConsultaTablasCodigosDynaForm" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="id" type="java.lang.String"/>
+            <form-property name="codigo" type="java.lang.String"/>
+            <form-property name="descripcion" type="java.lang.String"/>
+            <form-property name="actId" type="java.lang.String"/>
+            <form-property name="actCodigo" type="java.lang.String"/>
+            <form-property name="actDescripcion" type="java.lang.String"/>
+        </form-bean>
+        <form-bean name="NuevaTablaCodigoDynaForm" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="id" type="java.lang.String"/>
+            <form-property name="codigo" type="java.lang.String"/>
+            <form-property name="descripcion" type="java.lang.String"/>
+        </form-bean>
+        <form-bean name="ActualizarTablaCodigoDynaForm" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="id" type="java.lang.String"/>
+            <form-property name="codigo" type="java.lang.String"/>
+            <form-property name="descripcion" type="java.lang.String"/>
+        </form-bean>
+        <form-bean name="ConsultaFichasCatastralesDynaForm" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="filtroBusqueda" type="java.lang.String"/>
+            <form-property name="estado" type="java.lang.String"/>
+            <form-property name="codigoUnicoCatastral" type="java.lang.String"/>
+            <form-property name="codigoReferenciaCatastral" type="java.lang.String"/>
+            <form-property name="codigoPredialRenta" type="java.lang.String"/>
+            <form-property name="codigoContribuyenteRenta" type="java.lang.String"/>
+            <form-property name="tipoVia" type="java.lang.String"/>
+            <form-property name="nombreVia" type="java.lang.String"/>
+            <form-property name="numeroMunicipal" type="java.lang.String"/>
+            <form-property name="lote" type="java.lang.String"/>
+            <form-property name="manzana" type="java.lang.String"/>
+            <form-property name="nombre" type="java.lang.String"/>
+            <form-property name="apellidoPaterno" type="java.lang.String"/>
+            <form-property name="apellidoMaterno" type="java.lang.String"/>
+            <form-property name="dniRuc" type="java.lang.String"/>
+        </form-bean>
+        <form-bean name="ConsultaHabUrbaDynaForm" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="cod_hab_urba" type="java.lang.String"/>
+            <form-property name="nom_hab_urba" type="java.lang.String"/>
+            <form-property name="tip_hab_urba" type="java.lang.String"/>
+            <form-property name="grupo_urba" type="java.lang.String"/>
+            <form-property name="id_ubi_geo" type="java.lang.String"/>
+            <form-property name="hid_cod_hab_urba" type="java.lang.String"/>
+            <form-property name="hid_tip_hab_urba" type="java.lang.String"/>
+            <form-property name="hid_nom_hab_urba" type="java.lang.String"/>
+            <form-property name="hid_grupo_urba" type="java.lang.String"/>
+            <form-property name="hid_id_ubi_geo" type="java.lang.String"/>
+        </form-bean>
+        <form-bean name="NuevaHabUrbaDynaForm" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="cod_hab_urba" type="java.lang.String"/>
+            <form-property name="nom_hab_urba" type="java.lang.String"/>
+            <form-property name="grupo_urba" type="java.lang.String"/>
+            <form-property name="tip_hab_urba" type="java.lang.String"/>
+            <form-property name="id_ubi_geo" type="java.lang.String"/>
+        </form-bean>
+        <form-bean name="ActualizarHabUrbaDynaForm" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="cod_hab_urba" type="java.lang.String"/>
+            <form-property name="nom_hab_urba" type="java.lang.String"/>
+            <form-property name="grupo_urba" type="java.lang.String"/>
+            <form-property name="tip_hab_urba" type="java.lang.String"/>
+            <form-property name="id_ubi_geo" type="java.lang.String"/>
+        </form-bean>
+        <form-bean name="ConsultaViaDynaForm" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="tip_via" type="java.lang.String"/>
+            <form-property name="cod_via" type="java.lang.String"/>
+            <form-property name="nom_via" type="java.lang.String"/>
+            <form-property name="id_ubi_geo" type="java.lang.String"/>
+            <form-property name="hid_tip_via" type="java.lang.String"/>
+            <form-property name="hid_cod_via" type="java.lang.String"/>
+            <form-property name="hid_nom_via" type="java.lang.String"/>
+            <form-property name="hid_id_ubi_geo" type="java.lang.String"/>
+        </form-bean>
+        <form-bean name="NuevaViaDynaForm" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="tip_via" type="java.lang.String"/>
+            <form-property name="cod_via" type="java.lang.String"/>
+            <form-property name="nom_via" type="java.lang.String"/>
+            <form-property name="id_ubi_geo" type="java.lang.String"/>
+        </form-bean>
+        <form-bean name="ActualizarViaDynaForm" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="tip_via" type="java.lang.String"/>
+            <form-property name="cod_via" type="java.lang.String"/>
+            <form-property name="nom_via" type="java.lang.String"/>
+            <form-property name="id_ubi_geo" type="java.lang.String"/>
+        </form-bean>
+        <form-bean name="ConsultaTrabajadorDynaForm" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="dni" type="java.lang.String"/>
+            <form-property name="nombres" type="java.lang.String"/>
+            <form-property name="ape_paterno" type="java.lang.String"/>
+            <form-property name="ape_materno" type="java.lang.String"/>
+            <form-property name="id_cargo" type="java.lang.String"/>
+            <form-property name="indice" type="java.lang.String"/>
+        </form-bean>
+        <form-bean name="NuevoTrabajadorDynaForm" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="dni" type="java.lang.String"/>
+            <form-property name="nombres" type="java.lang.String"/>
+            <form-property name="ape_paterno" type="java.lang.String"/>
+            <form-property name="ape_materno" type="java.lang.String"/>
+            <form-property name="email" type="java.lang.String"/>
+            <form-property name="id_cargo" type="java.lang.String"/>
+            <form-property name="id_est_usu_tra" type="java.lang.String"/>
+        </form-bean>
+        <form-bean name="ActualizarTrabajadorDynaForm" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="id_trabajador" type="java.lang.String"/>
+            <form-property name="dni" type="java.lang.String"/>
+            <form-property name="nombres" type="java.lang.String"/>
+            <form-property name="ape_paterno" type="java.lang.String"/>
+            <form-property name="ape_materno" type="java.lang.String"/>
+            <form-property name="email" type="java.lang.String"/>
+            <form-property name="id_cargo" type="java.lang.String"/>
+            <form-property name="id_est_usu_tra" type="java.lang.String"/>
+        </form-bean>
+    </form-beans>
+    
+    <global-exceptions>
+    </global-exceptions>
+    <global-forwards>
+    </global-forwards>
+    
+    <action-mappings>
+        <!-- Login Action -->
+        <action input="/jsp/loguin.jsp" name="LoguinDynaForm" parameter="method" path="/loguin-action" scope="session" type="com.bmp.sigeca.seguridad.action.LoguinAction" validate="false">
+            <forward name="inicio" path="/jsp/loguin.jsp" redirect="false"/>
+            <forward name="noSession" path="/jsp/noSession.jsp" redirect="false"/>
+            <forward name="registroUsuario" path="/jsp/registroUsuario.jsp" redirect="false"/>
+            <forward name="bienvenida" path="/jsp/bienvenida.jsp" redirect="false"/>
+            <forward name="clave" path="/jsp/clave.jsp" redirect="false"/>
+            <forward name="menuAdministrador" path="/jsp/busqueda.jsp" redirect="false"/>
+            <forward name="busqueda" path="/jsp/busqueda.jsp" redirect="false"/>
+            <forward name="menuSupervisor" path="/jsp/busqueda.jsp" redirect="false"/>
+            <forward name="setUbigeo" path="/jsp/setUbigeo.jsp" redirect="false"/>
+        </action>
+        <!-- Registro Usuario Action -->
+        <action input="/jsp/registroUsuario.jsp" name="RegistroUsuarioDynaForm" parameter="method" path="/registroUsuario-action" scope="session" type="com.bmp.sigeca.seguridad.action.RegistroUsuarioAction" validate="false">
+            <forward name="inicio" path="/jsp/loguin.jsp" redirect="false"/>
+            <forward name="noSession" path="/jsp/noSession.jsp" redirect="false"/>
+            <forward name="registroUsuario" path="/jsp/registroUsuario.jsp" redirect="false"/>
+            <forward name="clave" path="/jsp/clave.jsp" redirect="false"/>
+            <forward name="cambiarClave" path="/jsp/cambioClave.jsp" redirect="false"/>
+            <forward name="menuAdministrador" path="/jsp/busqueda.jsp" redirect="false"/>
+            <forward name="busqueda" path="/jsp/busqueda.jsp" redirect="false"/>
+            <forward name="menuSupervisor" path="/jsp/busqueda.jsp" redirect="false"/>
+        </action>
+        <!-- Menu Action -->
+        <action input="/jsp/menu.jsp" name="MenuDynaForm" parameter="method" path="/menu-action" scope="session" type="com.bmp.sigeca.seguridad.action.MenuAction" validate="false">
+            <forward name="inicio" path="/jsp/loguin.jsp" redirect="false"/>
+            <forward name="noSession" path="/jsp/noSession.jsp" redirect="false"/>
+            <forward name="registroUsuario" path="/jsp/registroUsuario.jsp" redirect="false"/>
+            <forward name="cambiarClave" path="/jsp/cambioClave.jsp" redirect="false"/>
+            <forward name="maestro" path="/jsp/configuracion/maestro.jsp" redirect="false"/>
+            <forward name="menuAdministrador" path="/jsp/busqueda.jsp" redirect="false"/>
+            <forward name="busqueda" path="/jsp/busqueda.jsp" redirect="false"/>
+            <forward name="menuSupervisor" path="/jsp/busqueda.jsp" redirect="false"/>
+            <forward name="actualizarFicha" path="/jsp/mantenimiento/actualizarFicha.jsp" redirect="false"/>
+            <forward name="fraccionarLote" path="/jsp/mantenimiento/fraccionarLote.jsp" redirect="false"/>
+            <forward name="fusionarLote" path="/jsp/mantenimiento/fusionarLote.jsp" redirect="false"/>
+            <forward name="reporteLotes" path="/jsp/reporte/reporteLotes.jsp" redirect="false"/>
+            <forward name="reportePropietarios" path="/jsp/reporte/reportePropietarios.jsp" redirect="false"/>
+            <forward name="fichaIndividual" path="/jsp/registro/fichaIndividual.jsp" redirect="false"/>
+            <forward name="fichaCotitularidad" path="/jsp/registro/fichaCotitularidad.jsp" redirect="false"/>
+            <forward name="fichaActividadEconomica" path="/jsp/registro/fichaActividadEconomica.jsp" redirect="false"/>
+            <forward name="fichaBienComun" path="/jsp/registro/fichaBienComun.jsp" redirect="false"/>
+            <forward name="fichaRural" path="/jsp/registro/fichaRural.jsp" redirect="false"/>
+            <forward name="fichaCulturalPrehispanico" path="/jsp/registro/fichaCulturalPrehispanico.jsp" redirect="false"/>
+            <forward name="fichaCulturalColonial" path="/jsp/registro/fichaCulturalColonial.jsp" redirect="false"/>
+
+            <forward name="reporteUsuario" path="/jsp/reporte/reporteUsuario.jsp" redirect="false"/>
+ 	    <forward name="reporteAdministrador" path="/jsp/reporte/reporteAdministrador.jsp" redirect="false"/>
+            <forward name="consultaUsos" path="/jsp/mantenimiento/usos/consultaUsos.jsp" redirect="false"/>
+            <forward name="consultaUsosBC" path="/jsp/mantenimiento/usosBC/consultaUsosBC.jsp" redirect="false"/>
+            <forward name="consultaNotaria" path="/jsp/mantenimiento/notarias/consultaNotaria.jsp" redirect="false"/>
+            <forward name="consultaUbigeo" path="/jsp/mantenimiento/ubigeo/consultaUbigeo.jsp" redirect="false"/>
+            <forward name="consultaCodInstalacion" path="/jsp/mantenimiento/codigoInstalaciones/consultaCodigo.jsp" redirect="false"/>
+            <forward name="consultaTablasCodigos" path="/jsp/mantenimiento/tablasCodigos/consultaTablasCodigos.jsp" redirect="false"/>
+            <forward name="consultaHabUrba" path="/jsp/mantenimiento/habilitacionesUrbanas/consultaHabUrba.jsp" redirect="false"/>
+            <forward name="consultaVia" path="/jsp/mantenimiento/vias/consultaVia.jsp" redirect="false"/>
+            <forward name="consultaTrabajador" path="/jsp/mantenimiento/trabajadores/consultaTrabajador.jsp" redirect="false"/>
+            <forward name="consultaFichasCatastrales" path="/jsp/consulta/consultaFichasCatastrales.jsp" redirect="false"/>
+        </action>
+        <!-- Inicio Action -->
+        <action input="/jsp/busqueda.jsp" name="InicioDynaForm" parameter="method" path="/inicio-action" scope="session" type="com.bmp.sigeca.seguridad.action.InicioAction" validate="false">
+            <forward name="inicio" path="/jsp/loguin.jsp" redirect="false"/>
+            <forward name="noSession" path="/jsp/noSession.jsp" redirect="false"/>
+            <forward name="menuAdministrador" path="/jsp/busqueda.jsp" redirect="false"/>
+            <forward name="busqueda" path="/jsp/busqueda.jsp" redirect="false"/>
+            <forward name="menuSupervisor" path="/jsp/busqueda.jsp" redirect="false"/>
+            <forward name="fichaIndividual" path="/jsp/registro/fichaIndividual.jsp" redirect="false"/>
+            <forward name="fichaCotitularidad" path="/jsp/registro/fichaCotitularidad.jsp" redirect="false"/>
+            <forward name="fichaActividadEconomica" path="/jsp/registro/fichaActividadEconomica.jsp" redirect="false"/>
+            <forward name="fichaBienComun" path="/jsp/registro/fichaBienComun.jsp" redirect="false"/>
+            <forward name="fichaRural" path="/jsp/registro/fichaRural.jsp" redirect="false"/>
+            <forward name="fichaCulturalPrehispanico" path="/jsp/registro/fichaCulturalPrehispanico.jsp" redirect="false"/>
+            <forward name="fichaCulturalColonial" path="/jsp/registro/fichaCulturalColonial.jsp" redirect="false"/>
+            <forward name="reporteLotes" path="/jsp/reporte/reporteLotes.jsp" redirect="false"/>
+            <forward name="reportePropietarios" path="/jsp/reporte/reportePropietarios.jsp" redirect="false"/>
+        </action>
+        <!-- Ficha Individual Action -->
+        <action input="/jsp/registro/fichaIndividual.jsp" name="FichaIndividualDynaForm" parameter="method" path="/fichaIndividual-action" scope="session" type="com.bmp.sigeca.registro.action.FichaIndividualAction" validate="false">
+            <forward name="bienvenida" path="/jsp/bienvenida.jsp" redirect="false"/>
+            <forward name="noSession" path="/jsp/noSession.jsp" redirect="false"/>
+            <forward name="menuAdministrador" path="/jsp/busqueda.jsp" redirect="false"/>
+            <forward name="busqueda" path="/jsp/busqueda.jsp" redirect="false"/>
+            <forward name="menuSupervisor" path="/jsp/busqueda.jsp" redirect="false"/>
+            <forward name="fichaIndividual" path="/jsp/registro/fichaIndividual.jsp" redirect="false"/>
+            <forward name="fichaBienComun" path="/jsp/registro/fichaBienComun.jsp" redirect="false"/>
+            <forward name="fichaRural" path="/jsp/registro/fichaRural.jsp" redirect="false"/>
+            <forward name="fichaCulturalColonial" path="/jsp/registro/fichaCulturalColonial.jsp" redirect="false"/>
+            <forward name="via" path="/jsp/registro/via.jsp" redirect="false"/>
+            <forward name="construccion" path="/jsp/registro/construccion.jsp" redirect="false"/>
+            <forward name="obra" path="/jsp/registro/obraComplementaria.jsp" redirect="false"/>
+            <forward name="documento" path="/jsp/registro/documento.jsp" redirect="false"/>
+            <forward name="litigante" path="/jsp/registro/litigante.jsp" redirect="false"/>
+        </action>
+        <!-- Ficha Cotitularidad Action -->
+        <action input="/jsp/registro/fichaCotitularidad.jsp" name="FichaCotitularidadDynaForm" parameter="method" path="/fichaCotitularidad-action" scope="session" type="com.bmp.sigeca.registro.action.FichaCotitularidadAction" validate="false">
+            <forward name="bienvenida" path="/jsp/bienvenida.jsp" redirect="false"/>
+            <forward name="noSession" path="/jsp/noSession.jsp" redirect="false"/>
+            <forward name="menuAdministrador" path="/jsp/busqueda.jsp" redirect="false"/>
+            <forward name="busqueda" path="/jsp/busqueda.jsp" redirect="false"/>
+            <forward name="menuSupervisor" path="/jsp/busqueda.jsp" redirect="false"/>
+            <forward name="fichaCotitularidad" path="/jsp/registro/fichaCotitularidad.jsp" redirect="false"/>
+            <forward name="cotitulares" path="/jsp/registro/cotitulares.jsp" redirect="false"/>
+        </action>
+        <!-- Ficha Actividad Economica Action -->
+        <action input="/jsp/registro/fichaActividadEconomica.jsp" name="FichaActividadEconomicaDynaForm" parameter="method" path="/fichaActividadEconomica-action" scope="session" type="com.bmp.sigeca.registro.action.FichaActividadEconomicaAction" validate="false">
+            <forward name="bienvenida" path="/jsp/bienvenida.jsp" redirect="false"/>
+            <forward name="noSession" path="/jsp/noSession.jsp" redirect="false"/>
+            <forward name="menuAdministrador" path="/jsp/busqueda.jsp" redirect="false"/>
+            <forward name="busqueda" path="/jsp/busqueda.jsp" redirect="false"/>
+            <forward name="menuSupervisor" path="/jsp/busqueda.jsp" redirect="false"/>
+            <forward name="fichaActividadEconomica" path="/jsp/registro/fichaActividadEconomica.jsp" redirect="false"/>
+            <forward name="anuncio" path="/jsp/registro/anuncio.jsp" redirect="false"/>
+            <forward name="actividad" path="/jsp/registro/actividad.jsp" redirect="false"/>
+        </action>
+        <!-- Ficha Bien Comun Action -->
+        <action input="/jsp/registro/fichaBienComun.jsp" name="FichaBienComunDynaForm" parameter="method" path="/fichaBienComun-action" scope="session" type="com.bmp.sigeca.registro.action.FichaBienComunAction" validate="false">
+            <forward name="bienvenida" path="/jsp/bienvenida.jsp" redirect="false"/>
+            <forward name="noSession" path="/jsp/noSession.jsp" redirect="false"/>
+            <forward name="menuAdministrador" path="/jsp/busqueda.jsp" redirect="false"/>
+            <forward name="busqueda" path="/jsp/busqueda.jsp" redirect="false"/>
+            <forward name="menuSupervisor" path="/jsp/busqueda.jsp" redirect="false"/>
+            <forward name="fichaBienComun" path="/jsp/registro/fichaBienComun.jsp" redirect="false"/>
+            <forward name="fichaActividadEconomica" path="/jsp/registro/fichaActividadEconomica.jsp" redirect="false"/>
+            <forward name="via" path="/jsp/registro/via.jsp" redirect="false"/>
+            <forward name="construccion" path="/jsp/registro/construccion.jsp" redirect="false"/>
+            <forward name="obra" path="/jsp/registro/obraComplementaria.jsp" redirect="false"/>
+            <forward name="edificio" path="/jsp/registro/edificio.jsp" redirect="false"/>
+            <forward name="bienComun" path="/jsp/registro/bienComun.jsp" redirect="false"/>
+        </action>
+        <!-- Ficha Rural Action -->
+        <action input="/jsp/registro/fichaRural.jsp" name="FichaRuralDynaForm" parameter="method" path="/fichaRural-action" scope="session" type="com.bmp.sigeca.registro.action.FichaRuralAction" validate="false">
+            <forward name="bienvenida" path="/jsp/bienvenida.jsp" redirect="false"/>
+            <forward name="noSession" path="/jsp/noSession.jsp" redirect="false"/>
+            <forward name="menuAdministrador" path="/jsp/busqueda.jsp" redirect="false"/>
+            <forward name="busqueda" path="/jsp/busqueda.jsp" redirect="false"/>
+            <forward name="menuSupervisor" path="/jsp/busqueda.jsp" redirect="false"/>
+            <forward name="fichaRural" path="/jsp/registro/fichaRural.jsp" redirect="false"/>
+            <forward name="construccion" path="/jsp/registro/construccion.jsp" redirect="false"/>
+            <forward name="documento" path="/jsp/registro/documento.jsp" redirect="false"/>
+            <forward name="litigante" path="/jsp/registro/litigante.jsp" redirect="false"/>
+            <forward name="cotitular" path="/jsp/registro/cotitular.jsp" redirect="false"/>
+        </action>
+        <!-- Ficha Cultural Prehispanico Action -->
+        <action input="/jsp/registro/fichaCulturalPrehispanico.jsp" name="FichaCultutalPrehispanicoDynaForm" parameter="method" path="/fichaCulturalPrehispanico-action" scope="session" type="com.bmp.sigeca.registro.action.FichaCulturalPrehispanicoAction" validate="false">
+            <forward name="bienvenida" path="/jsp/bienvenida.jsp" redirect="false"/>
+            <forward name="noSession" path="/jsp/noSession.jsp" redirect="false"/>
+            <forward name="menuAdministrador" path="/jsp/busqueda.jsp" redirect="false"/>
+            <forward name="busqueda" path="/jsp/busqueda.jsp" redirect="false"/>
+            <forward name="menuSupervisor" path="/jsp/busqueda.jsp" redirect="false"/>
+            <forward name="fichaCulturalPrehispanico" path="/jsp/registro/fichaCulturalPrehispanico.jsp" redirect="false"/>
+            <forward name="fichaCulturalColonial" path="/jsp/registro/fichaCulturalColonial.jsp" redirect="false"/>
+            <forward name="norma" path="/jsp/registro/norma.jsp" redirect="false"/>
+        </action>
+        <!-- Ficha Cultural Colonial Action -->
+        <action input="/jsp/registro/fichaCulturalColonial.jsp" name="FichaCultutalColonialDynaForm" parameter="method" path="/fichaCulturalColonial-action" scope="session" type="com.bmp.sigeca.registro.action.FichaCulturalColonialAction" validate="false">
+            <forward name="bienvenida" path="/jsp/bienvenida.jsp" redirect="false"/>
+            <forward name="noSession" path="/jsp/noSession.jsp" redirect="false"/>
+            <forward name="menuAdministrador" path="/jsp/busqueda.jsp" redirect="false"/>
+            <forward name="busqueda" path="/jsp/busqueda.jsp" redirect="false"/>
+            <forward name="menuSupervisor" path="/jsp/busqueda.jsp" redirect="false"/>
+            <forward name="fichaCulturalPrehispanico" path="/jsp/registro/fichaCulturalPrehispanico.jsp" redirect="false"/>
+            <forward name="fichaCulturalColonial" path="/jsp/registro/fichaCulturalColonial.jsp" redirect="false"/>
+            <forward name="norma" path="/jsp/registro/norma.jsp" redirect="false"/>
+            <forward name="litigante" path="/jsp/registro/litigante.jsp" redirect="false"/>
+        </action>
+        <!-- Mantenimeinto de Maestros Action -->
+        <action input="/jsp/configuracion/maestro.jsp" name="MaestroDynaForm" parameter="method" path="/maestro-action" scope="session" type="com.bmp.sigeca.maestro.action.MaestroMantoAction" validate="false">
+            <forward name="bienvenida" path="/jsp/bienvenida.jsp" redirect="false"/>
+            <forward name="noSession" path="/jsp/noSession.jsp" redirect="false"/>
+            <forward name="menuAdministrador" path="/jsp/busqueda.jsp" redirect="false"/>
+            <forward name="busqueda" path="/jsp/busqueda.jsp" redirect="false"/>
+            <forward name="menuSupervisor" path="/jsp/busqueda.jsp" redirect="false"/>
+            <forward name="maestro" path="/jsp/configuracion/maestro.jsp" redirect="false"/>
+        </action>
+        <!-- Mantenimiento Usos Action -->
+        <action input="/jsp/mantenimiento/usos/consultaUsos.jsp" name="ConsultaUsosDynaForm" parameter="method" path="/consultaUsos-action" scope="session" type="com.bmp.sigeca.mantenimiento.action.ConsultaUsosAction" validate="false">
+            <forward name="nuevo" path="/jsp/mantenimiento/usos/nuevoUso.jsp" redirect="false"/>
+            <forward name="consulta" path="/jsp/mantenimiento/usos/consultaUsos.jsp" redirect="false"/>
+            <forward name="actualizar" path="/jsp/mantenimiento/usos/actualizarUso.jsp" redirect="false"/>
+        </action>
+        <action input="/jsp/mantenimiento/usos/nuevoUso.jsp" name="NuevoUsoDynaForm" parameter="method" path="/nuevoUso-action" scope="session" type="com.bmp.sigeca.mantenimiento.action.NuevoUsoAction" validate="false">
+            <forward name="nuevo" path="/jsp/mantenimiento/usos/nuevoUso.jsp" redirect="false"/>
+            <forward name="consulta" path="/jsp/mantenimiento/usos/consultaUsos.jsp" redirect="false"/>
+        </action>
+        <action input="/jsp/mantenimiento/usos/actualizarUso.jsp" name="ActualizarUsoDynaForm" parameter="method" path="/actualizarUso-action" scope="session" type="com.bmp.sigeca.mantenimiento.action.ActualizarUsoAction" validate="false">
+            <forward name="actualizar" path="/jsp/mantenimiento/usos/actualizarUso.jsp" redirect="false"/>
+            <forward name="consulta" path="/jsp/mantenimiento/usos/consultaUsos.jsp" redirect="false"/>
+        </action>
+        <!-- Mantenimiento Usos BC Action -->
+        <action input="/jsp/mantenimiento/usosBC/consultaUsosBC.jsp" name="ConsultaUsosBCDynaForm" parameter="method" path="/consultaUsosBC-action" scope="session" type="com.bmp.sigeca.mantenimiento.action.ConsultaUsosBCAction" validate="false">
+            <forward name="nuevo" path="/jsp/mantenimiento/usosBC/nuevoUsoBC.jsp" redirect="false"/>
+            <forward name="consulta" path="/jsp/mantenimiento/usosBC/consultaUsosBC.jsp" redirect="false"/>
+            <forward name="actualizar" path="/jsp/mantenimiento/usosBC/actualizarUsoBC.jsp" redirect="false"/>
+        </action>
+        <action input="/jsp/mantenimiento/usosBC/nuevoUso.jsp" name="NuevoUsoBCDynaForm" parameter="method" path="/nuevoUsoBC-action" scope="session" type="com.bmp.sigeca.mantenimiento.action.NuevoUsoBCAction" validate="false">
+            <forward name="nuevo" path="/jsp/mantenimiento/usosBC/nuevoUsoBC.jsp" redirect="false"/>
+            <forward name="consulta" path="/jsp/mantenimiento/usosBC/consultaUsosBC.jsp" redirect="false"/>
+        </action>
+        <action input="/jsp/mantenimiento/usosBC/actualizarUso.jsp" name="ActualizarUsoBCDynaForm" parameter="method" path="/actualizarUsoBC-action" scope="session" type="com.bmp.sigeca.mantenimiento.action.ActualizarUsoBCAction" validate="false">
+            <forward name="actualizar" path="/jsp/mantenimiento/usosBC/actualizarUsoBC.jsp" redirect="false"/>
+            <forward name="consulta" path="/jsp/mantenimiento/usosBC/consultaUsosBC.jsp" redirect="false"/>
+        </action>
+        <!-- Mantenimiento Notaría Action -->
+        <action input="/jsp/mantenimiento/notarias/consultaNotaria.jsp" name="ConsultaNotariaDynaForm" parameter="method" path="/consultaNotaria-action" scope="session" type="com.bmp.sigeca.mantenimiento.action.ConsultaNotariaAction" validate="false">
+            <forward name="nuevo" path="/jsp/mantenimiento/notarias/nuevaNotaria.jsp" redirect="false"/>
+            <forward name="consulta" path="/jsp/mantenimiento/notarias/consultaNotaria.jsp" redirect="false"/>
+            <forward name="actualizar" path="/jsp/mantenimiento/notarias/actualizarNotaria.jsp" redirect="false"/>
+        </action>
+        <action input="/jsp/mantenimiento/notarias/nuevaNotaria.jsp" name="NuevaNotariaDynaForm" parameter="method" path="/nuevaNotaria-action" scope="session" type="com.bmp.sigeca.mantenimiento.action.NuevaNotariaAction" validate="false">
+            <forward name="nuevo" path="/jsp/mantenimiento/notarias/nuevaNotaria.jsp" redirect="false"/>
+            <forward name="consulta" path="/jsp/mantenimiento/notarias/consultaNotaria.jsp" redirect="false"/>
+        </action>
+        <action input="/jsp/mantenimiento/notarias/actualizarNotaria.jsp" name="ActualizarNotariaDynaForm" parameter="method" path="/actualizarNotaria-action" scope="session" type="com.bmp.sigeca.mantenimiento.action.ActualizarNotariaAction" validate="false">
+            <forward name="actualizar" path="/jsp/mantenimiento/notarias/actualizarNotaria.jsp" redirect="false"/>
+            <forward name="consulta" path="/jsp/mantenimiento/notarias/consultaNotaria.jsp" redirect="false"/>
+        </action>
+        <!-- Mantenimiento Ubigeo Action -->
+        <action input="/jsp/mantenimiento/ubigeo/consultaUbigeo.jsp" name="ConsultaUbigeoDynaForm" parameter="method" path="/consultaUbigeo-action" scope="session" type="com.bmp.sigeca.mantenimiento.action.ConsultaUbigeoAction" validate="false">
+            <forward name="nuevo" path="/jsp/mantenimiento/ubigeo/nuevoUbigeo.jsp" redirect="false"/>
+            <forward name="consulta" path="/jsp/mantenimiento/ubigeo/consultaUbigeo.jsp" redirect="false"/>
+            <forward name="actualizar" path="/jsp/mantenimiento/ubigeo/actualizarUbigeo.jsp" redirect="false"/>
+        </action>
+        <action input="/jsp/mantenimiento/ubigeo/nuevoUbigeo.jsp" name="NuevoUbigeoDynaForm" parameter="method" path="/nuevoUbigeo-action" scope="session" type="com.bmp.sigeca.mantenimiento.action.NuevoUbigeoAction" validate="false">
+            <forward name="nuevo" path="/jsp/mantenimiento/ubigeo/nuevoUbigeo.jsp" redirect="false"/>
+            <forward name="consulta" path="/jsp/mantenimiento/ubigeo/consultaUbigeo.jsp" redirect="false"/>
+        </action>
+        <action input="/jsp/mantenimiento/ubigeo/actualizarUbigeo.jsp" name="ActualizarUbigeoDynaForm" parameter="method" path="/actualizarUbigeo-action" scope="session" type="com.bmp.sigeca.mantenimiento.action.ActualizarUbigeoAction" validate="false">
+            <forward name="actualizar" path="/jsp/mantenimiento/ubigeo/actualizarUbigeo.jsp" redirect="false"/>
+            <forward name="consulta" path="/jsp/mantenimiento/ubigeo/consultaUbigeo.jsp" redirect="false"/>
+        </action>
+        <!-- Mantenimiento Código Instalación Action -->
+        <action input="/jsp/mantenimiento/codigoInstalaciones/consultaCodigo.jsp" name="ConsultaCodInstalacionDynaForm" parameter="method" path="/consultaCodInstalacion-action" scope="session" type="com.bmp.sigeca.mantenimiento.action.ConsultaCodInstalacionAction" validate="false">
+            <forward name="nuevo" path="/jsp/mantenimiento/codigoInstalaciones/nuevoCodigo.jsp" redirect="false"/>
+            <forward name="consulta" path="/jsp/mantenimiento/codigoInstalaciones/consultaCodigo.jsp" redirect="false"/>
+            <forward name="actualizar" path="/jsp/mantenimiento/codigoInstalaciones/actualizarCodigo.jsp" redirect="false"/>
+        </action>
+        <action input="/jsp/mantenimiento/codigoInstalaciones/nuevoCodInstalacion.jsp" name="NuevoCodInstalacionDynaForm" parameter="method" path="/nuevoCodInstalacion-action" scope="session" type="com.bmp.sigeca.mantenimiento.action.NuevoCodInstalacionAction" validate="false">
+            <forward name="nuevo" path="/jsp/mantenimiento/codigoInstalaciones/nuevoCodigo.jsp" redirect="false"/>
+            <forward name="consulta" path="/jsp/mantenimiento/codigoInstalaciones/consultaCodigo.jsp" redirect="false"/>
+        </action>
+        <action input="/jsp/mantenimiento/codigoInstalaciones/actualizarCodigo.jsp" name="ActualizarCodInstalacionDynaForm" parameter="method" path="/actualizarCodInstalacion-action" scope="session" type="com.bmp.sigeca.mantenimiento.action.ActualizarCodInstalacionAction" validate="false">
+            <forward name="actualizar" path="/jsp/mantenimiento/codigoInstalaciones/actualizarCodigo.jsp" redirect="false"/>
+            <forward name="consulta" path="/jsp/mantenimiento/codigoInstalaciones/consultaCodigo.jsp" redirect="false"/>
+        </action>
+        <!-- Mantenimiento Tablas Códigos Action -->
+        <action input="/jsp/mantenimiento/tablasCodigos/consultaTablasCodigos.jsp" name="ConsultaTablasCodigosDynaForm" parameter="method" path="/consultaTablasCodigos-action" scope="session" type="com.bmp.sigeca.mantenimiento.action.ConsultaTablasCodigosAction" validate="false">
+            <forward name="nuevo" path="/jsp/mantenimiento/tablasCodigos/nuevaTablaCodigo.jsp" redirect="false"/>
+            <forward name="consulta" path="/jsp/mantenimiento/tablasCodigos/consultaTablasCodigos.jsp" redirect="false"/>
+            <forward name="actualizar" path="/jsp/mantenimiento/tablasCodigos/actualizarTablaCodigo.jsp" redirect="false"/>
+        </action>
+        <action input="/jsp/mantenimiento/tablasCodigos/nuevoCodInstalacion.jsp" name="NuevaTablaCodigoDynaForm" parameter="method" path="/nuevaTablaCodigo-action" scope="session" type="com.bmp.sigeca.mantenimiento.action.NuevaTablaCodigoAction" validate="false">
+            <forward name="nuevo" path="/jsp/mantenimiento/tablasCodigos/nuevaTablaCodigo.jsp" redirect="false"/>
+            <forward name="consulta" path="/jsp/mantenimiento/tablasCodigos/consultaTablasCodigos.jsp" redirect="false"/>
+        </action>
+        <action input="/jsp/mantenimiento/tablasCodigos/actualizarTablaCodigo.jsp" name="ActualizarTablaCodigoDynaForm" parameter="method" path="/actualizarTablaCodigo-action" scope="session" type="com.bmp.sigeca.mantenimiento.action.ActualizarTablaCodigoAction" validate="false">
+            <forward name="actualizar" path="/jsp/mantenimiento/tablasCodigos/actualizarTablaCodigo.jsp" redirect="false"/>
+            <forward name="consulta" path="/jsp/mantenimiento/tablasCodigos/consultaTablasCodigos.jsp" redirect="false"/>
+        </action>
+        <!-- Mantenimiento Habilitación Urbana Action -->
+        <action input="/jsp/mantenimiento/habilitacionesUrbanas/consultaHabUrba.jsp" name="ConsultaHabUrbaDynaForm" parameter="method" path="/consultaHabUrba-action" scope="session" type="com.bmp.sigeca.mantenimiento.action.ConsultaHabUrbaAction" validate="false">
+            <forward name="nuevo" path="/jsp/mantenimiento/habilitacionesUrbanas/nuevaHabUrba.jsp" redirect="false"/>
+            <forward name="consulta" path="/jsp/mantenimiento/habilitacionesUrbanas/consultaHabUrba.jsp" redirect="false"/>
+            <forward name="actualizar" path="/jsp/mantenimiento/habilitacionesUrbanas/actualizarHabUrba.jsp" redirect="false"/>
+        </action>
+        <action input="/jsp/mantenimiento/habilitacionesUrbanas/nuevaHabUrba.jsp" name="NuevaHabUrbaDynaForm" parameter="method" path="/nuevaHabUrba-action" scope="session" type="com.bmp.sigeca.mantenimiento.action.NuevaHabUrbaAction" validate="false">
+            <forward name="nuevo" path="/jsp/mantenimiento/habilitacionesUrbanas/nuevaHabUrba.jsp" redirect="false"/>
+            <forward name="consulta" path="/jsp/mantenimiento/habilitacionesUrbanas/consultaHabUrba.jsp" redirect="false"/>
+        </action>
+        <action input="/jsp/mantenimiento/habilitacionesUrbanas/actualizarHabUrba.jsp" name="ActualizarHabUrbaDynaForm" parameter="method" path="/actualizarHabUrba-action" scope="session" type="com.bmp.sigeca.mantenimiento.action.ActualizarHabUrbaAction" validate="false">
+            <forward name="actualizar" path="/jsp/mantenimiento/habilitacionesUrbanas/actualizarHabUrba.jsp" redirect="false"/>
+            <forward name="consulta" path="/jsp/mantenimiento/habilitacionesUrbanas/consultaHabUrba.jsp" redirect="false"/>
+        </action>
+        <!-- Mantenimiento Via Action -->
+        <action input="/jsp/mantenimiento/vias/consultaHabUrba.jsp" name="ConsultaViaDynaForm" parameter="method" path="/consultaVia-action" scope="session" type="com.bmp.sigeca.mantenimiento.action.ConsultaViaAction" validate="false">
+            <forward name="nuevo" path="/jsp/mantenimiento/vias/nuevaVia.jsp" redirect="false"/>
+            <forward name="consulta" path="/jsp/mantenimiento/vias/consultaVia.jsp" redirect="false"/>
+            <forward name="actualizar" path="/jsp/mantenimiento/vias/actualizarVia.jsp" redirect="false"/>
+        </action>
+        <action input="/jsp/mantenimiento/vias/nuevaHabUrba.jsp" name="NuevaViaDynaForm" parameter="method" path="/nuevaVia-action" scope="session" type="com.bmp.sigeca.mantenimiento.action.NuevaViaAction" validate="false">
+            <forward name="nuevo" path="/jsp/mantenimiento/vias/nuevaVia.jsp" redirect="false"/>
+            <forward name="consulta" path="/jsp/mantenimiento/vias/consultaVia.jsp" redirect="false"/>
+        </action>
+        <action input="/jsp/mantenimiento/vias/actualizarHabUrba.jsp" name="ActualizarViaDynaForm" parameter="method" path="/actualizarVia-action" scope="session" type="com.bmp.sigeca.mantenimiento.action.ActualizarViaAction" validate="false">
+            <forward name="actualizar" path="/jsp/mantenimiento/vias/actualizarVia.jsp" redirect="false"/>
+            <forward name="consulta" path="/jsp/mantenimiento/vias/consultaVia.jsp" redirect="false"/>
+        </action>
+        <!-- Mantenimiento Trabajador Action -->
+        <action input="/jsp/mantenimiento/trabajadores/consultaTrabajador.jsp" name="ConsultaTrabajadorDynaForm" parameter="method" path="/consultaTrabajador-action" scope="session" type="com.bmp.sigeca.mantenimiento.action.ConsultaTrabajadorAction" validate="false">
+            <forward name="nuevo" path="/jsp/mantenimiento/trabajadores/nuevoTrabajador.jsp" redirect="false"/>
+            <forward name="consulta" path="/jsp/mantenimiento/trabajadores/consultaTrabajador.jsp" redirect="false"/>
+            <forward name="actualizar" path="/jsp/mantenimiento/trabajadores/actualizarTrabajador.jsp" redirect="false"/>
+        </action>
+        <action input="/jsp/mantenimiento/trabajadores/nuevoTrabajador.jsp" name="NuevoTrabajadorDynaForm" parameter="method" path="/nuevoTrabajador-action" scope="session" type="com.bmp.sigeca.mantenimiento.action.NuevoTrabajadorAction" validate="false">
+            <forward name="nuevo" path="/jsp/mantenimiento/trabajadores/nuevoTrabajador.jsp" redirect="false"/>
+            <forward name="consulta" path="/jsp/mantenimiento/trabajadores/consultaTrabajador.jsp" redirect="false"/>
+        </action>
+        <action input="/jsp/mantenimiento/trabajadores/actualizarTrabajador.jsp" name="ActualizarTrabajadorDynaForm" parameter="method" path="/actualizarTrabajador-action" scope="session" type="com.bmp.sigeca.mantenimiento.action.ActualizarTrabajadorAction" validate="false">
+            <forward name="actualizar" path="/jsp/mantenimiento/trabajadores/actualizarTrabajador.jsp" redirect="false"/>
+            <forward name="consulta" path="/jsp/mantenimiento/trabajadores/consultaTrabajador.jsp" redirect="false"/>
+        </action>
+        <!-- Consulta Fichas Catastrales Action -->
+        <action input="/jsp/consulta/consultaFichasCatastrales.jsp" name="ConsultaFichasCatastralesDynaForm" parameter="method" path="/consultaFichasCatastrales-action" scope="session" type="com.bmp.sigeca.consulta.action.ConsultaFichasAction" validate="false">
+            <forward name="consulta" path="/jsp/consulta/consultaFichasCatastrales.jsp" redirect="false"/>
+        </action>
+
+	<!-- Reporte usuario -->
+          <action input="/jsp/reporte/reporteUsuario.jsp" name="ReporteUsuarioDynaForm" parameter="method" path="/reporteUsuario-action" scope="session" type="com.bmp.sigeca.reporte.action.ReporteUsuarioAction" validate="false">
+            <forward name="consulta" path="/jsp/reporte/reporteUsuario.jsp" redirect="false"/>
+        </action>
+
+	<!-- Reporte Administrador-->
+         <action input="/jsp/reporte/reporteAdministrador.jsp" name="ReporteAdministradorDynaForm" parameter="method" path="/reporteAdministrador-action" scope="session" type="com.bmp.sigeca.reporte.action.ReporteAdminstradorAction" validate="false">
+            <forward name="consulta" path="/jsp/reporte/reporteAdministrador.jsp" redirect="false"/>
+        </action>
+    </action-mappings>
+    
+    <!--
+    <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
+    -->
+    <controller maxFileSize="10M" inputForward="true" />
+    <message-resources parameter="com/bmp/sigeca/resource/ApplicationResources"/>
+    
+    <!-- ========================= Tiles plugin =============================== -->
+    <!--
+    This plugin initialize Tiles definition factory. This later can takes some
+    parameters explained here after. The plugin first read parameters from
+    web.xml, thenoverload them with parameters defined here. All parameters
+    are optional.
+    The plugin should be declared in each struts-config file.
+    - definitions-config: (optional)
+    Specify configuration file names. There can be several comma
+    separated file names (default: ?? )
+    - moduleAware: (optional - struts1.1)
+    Specify if the Tiles definition factory is module aware. If true
+    (default), there will be one factory for each Struts module.
+    If false, there will be one common factory for all module. In this
+    later case, it is still needed to declare one plugin per module.
+    The factory will be initialized with parameters found in the first
+    initialized plugin (generally the one associated with the default
+    module).
+    true : One factory per module. (default)
+    false : one single shared factory for all modules
+    - definitions-parser-validate: (optional)
+    Specify if xml parser should validate the Tiles configuration file.
+    true : validate. DTD should be specified in file header (default)
+    false : no validation
+
+    Paths found in Tiles definitions are relative to the main context.
+    -->
+    <plug-in className="org.apache.struts.tiles.TilesPlugin" >
+        <set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml" />      
+        <set-property property="moduleAware" value="true" />
+    </plug-in>
+    
+    <!-- ========================= Validator plugin ================================= -->
+    <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+        <set-property
+            property="pathnames"
+            value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"/>
+    </plug-in>
+  
+</struts-config>

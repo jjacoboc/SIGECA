@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report01General" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="37"/>
+	<property name="ireport.y" value="260"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="reporteBean.departamento" class="java.lang.String">
+		<fieldDescription><![CDATA[reporteBean.departamento]]></fieldDescription>
+	</field>
+	<field name="reporteBean.provincia" class="java.lang.String">
+		<fieldDescription><![CDATA[reporteBean.provincia]]></fieldDescription>
+	</field>
+	<field name="reporteBean.distrito" class="java.lang.String">
+		<fieldDescription><![CDATA[reporteBean.distrito]]></fieldDescription>
+	</field>
+	<field name="digitador" class="java.lang.String">
+		<fieldDescription><![CDATA[digitador]]></fieldDescription>
+	</field>
+	<field name="total" class="java.lang.String">
+		<fieldDescription><![CDATA[total]]></fieldDescription>
+	</field>
+	<field name="totalDomingo" class="java.lang.String">
+		<fieldDescription><![CDATA[totalDomingo]]></fieldDescription>
+	</field>
+	<field name="totalJueves" class="java.lang.String">
+		<fieldDescription><![CDATA[totalJueves]]></fieldDescription>
+	</field>
+	<field name="totalLunes" class="java.lang.String">
+		<fieldDescription><![CDATA[totalLunes]]></fieldDescription>
+	</field>
+	<field name="totalMartes" class="java.lang.String">
+		<fieldDescription><![CDATA[totalMartes]]></fieldDescription>
+	</field>
+	<field name="totalMiercoles" class="java.lang.String">
+		<fieldDescription><![CDATA[totalMiercoles]]></fieldDescription>
+	</field>
+	<field name="totalSabado" class="java.lang.String">
+		<fieldDescription><![CDATA[totalSabado]]></fieldDescription>
+	</field>
+	<field name="totalViernes" class="java.lang.String">
+		<fieldDescription><![CDATA[totalViernes]]></fieldDescription>
+	</field>
+	<field name="reporteBean.fechaInicio" class="java.lang.String"/>
+	<field name="reporteBean.fechaFin" class="java.lang.String"/>
+	<field name="reporteBean.estado" class="java.lang.String"/>
+	<field name="reporteBean.digitador" class="java.lang.String"/>
+	<group name="cabecera">
+		<groupHeader>
+			<band height="180">
+				<staticText>
+					<reportElement x="385" y="138" width="57" height="20"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Distrito:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="51" y="138" width="86" height="20"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Departamento:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="51" y="118" width="100" height="20"/>
+					<textElement>
+						<font isBold="true" isUnderline="true"/>
+					</textElement>
+					<text><![CDATA[Datos Ubicacion]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="206" y="138" width="79" height="20"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Provincia:]]></text>
+				</staticText>
+				<line>
+					<reportElement x="0" y="167" width="555" height="1"/>
+				</line>
+				<textField>
+					<reportElement x="285" y="138" width="92" height="20"/>
+					<textElement/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{reporteBean.provincia}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="442" y="138" width="100" height="20"/>
+					<textElement/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{reporteBean.distrito}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="145" y="0" width="312" height="42"/>
+					<textElement textAlignment="Center">
+						<font size="12" isBold="true" isUnderline="true"/>
+					</textElement>
+					<text><![CDATA[REPORTE (Administrador –General) POR: DIGITADOR, FECHA, ESTADO]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="137" y="138" width="69" height="20"/>
+					<textElement/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{reporteBean.departamento}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="200" y="42" width="100" height="20"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Digitador:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="300" y="42" width="100" height="20"/>
+					<textElement/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{reporteBean.digitador}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="100" y="62" width="100" height="20"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Fecha de inicio:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="200" y="62" width="100" height="20"/>
+					<textElement/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{reporteBean.fechaInicio}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="300" y="62" width="100" height="20"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Fecha de fin:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="400" y="62" width="100" height="20"/>
+					<textElement/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{reporteBean.fechaFin}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="200" y="82" width="100" height="20"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Estado :]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="300" y="82" width="100" height="20"/>
+					<textElement/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{reporteBean.estado}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="columnas">
+		<groupHeader>
+			<band height="30">
+				<line>
+					<reportElement x="0" y="29" width="554" height="1"/>
+				</line>
+				<line>
+					<reportElement x="0" y="0" width="1" height="30"/>
+				</line>
+				<staticText>
+					<reportElement x="423" y="1" width="47" height="20"/>
+					<textElement/>
+					<text><![CDATA[Sabado]]></text>
+				</staticText>
+				<line>
+					<reportElement x="215" y="0" width="1" height="30"/>
+				</line>
+				<staticText>
+					<reportElement x="81" y="1" width="64" height="20"/>
+					<textElement/>
+					<text><![CDATA[Lunes]]></text>
+				</staticText>
+				<line>
+					<reportElement x="145" y="0" width="1" height="30"/>
+				</line>
+				<staticText>
+					<reportElement x="148" y="1" width="64" height="20"/>
+					<textElement/>
+					<text><![CDATA[Martes]]></text>
+				</staticText>
+				<line>
+					<reportElement x="285" y="0" width="1" height="30"/>
+				</line>
+				<line>
+					<reportElement x="555" y="0" width="1" height="30"/>
+				</line>
+				<line>
+					<reportElement x="420" y="0" width="1" height="30"/>
+				</line>
+				<line>
+					<reportElement x="1" y="0" width="554" height="1"/>
+				</line>
+				<staticText>
+					<reportElement x="357" y="0" width="63" height="20"/>
+					<textElement/>
+					<text><![CDATA[Viernes]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="219" y="0" width="64" height="20"/>
+					<textElement/>
+					<text><![CDATA[Miercoles]]></text>
+				</staticText>
+				<line>
+					<reportElement x="79" y="1" width="1" height="28"/>
+				</line>
+				<line>
+					<reportElement x="354" y="1" width="1" height="28"/>
+				</line>
+				<staticText>
+					<reportElement x="3" y="1" width="64" height="20"/>
+					<textElement/>
+					<text><![CDATA[Digitador]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="289" y="1" width="64" height="20"/>
+					<textElement/>
+					<text><![CDATA[Jueves]]></text>
+				</staticText>
+				<line>
+					<reportElement x="470" y="0" width="1" height="30"/>
+				</line>
+				<staticText>
+					<reportElement x="472" y="1" width="47" height="20"/>
+					<textElement/>
+					<text><![CDATA[Domingo]]></text>
+				</staticText>
+				<line>
+					<reportElement x="516" y="2" width="1" height="27"/>
+				</line>
+				<staticText>
+					<reportElement x="522" y="2" width="27" height="20"/>
+					<textElement/>
+					<text><![CDATA[Total]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="70" splitType="Stretch">
+			<staticText>
+				<reportElement x="392" y="5" width="65" height="20"/>
+				<textElement/>
+				<text><![CDATA[Consulta Nro:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="394" y="25" width="63" height="20"/>
+				<textElement/>
+				<text><![CDATA[Hoja:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="457" y="25" width="86" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="0" y="0" width="151" height="55"/>
+				<imageExpression class="java.lang.String"><![CDATA["G:\\Proyectos\\SIGECA\\DEV\\reportes\\logo.PNG"]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="24" splitType="Stretch">
+			<textField>
+				<reportElement x="148" y="1" width="64" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{totalMartes}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="218" y="1" width="64" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{totalMiercoles}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="289" y="2" width="64" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{totalJueves}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="423" y="0" width="47" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{totalSabado}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="0" width="1" height="24"/>
+			</line>
+			<line>
+				<reportElement x="79" y="0" width="1" height="24"/>
+			</line>
+			<line>
+				<reportElement x="145" y="0" width="1" height="24"/>
+			</line>
+			<line>
+				<reportElement x="215" y="0" width="1" height="24"/>
+			</line>
+			<line>
+				<reportElement x="420" y="0" width="1" height="24"/>
+			</line>
+			<line>
+				<reportElement x="555" y="0" width="1" height="24"/>
+			</line>
+			<line>
+				<reportElement x="0" y="23" width="554" height="1"/>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="554" height="1"/>
+			</line>
+			<line>
+				<reportElement x="285" y="1" width="1" height="22"/>
+			</line>
+			<line>
+				<reportElement x="354" y="0" width="1" height="24"/>
+			</line>
+			<textField>
+				<reportElement x="4" y="2" width="75" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{digitador}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="82" y="1" width="56" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{totalLunes}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="356" y="1" width="64" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{totalViernes}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="470" y="1" width="1" height="22"/>
+			</line>
+			<line>
+				<reportElement x="516" y="1" width="1" height="22"/>
+			</line>
+			<textField>
+				<reportElement x="472" y="1" width="44" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{totalDomingo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="519" y="1" width="36" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="36" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
